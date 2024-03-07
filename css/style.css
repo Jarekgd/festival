@@ -85,6 +85,10 @@ body, html {
     width: 80%;
   }
 
+  .img_right{
+    width: 40%;
+  }
+
   .right {
     text-align: justify;
     line-height: 50px;
