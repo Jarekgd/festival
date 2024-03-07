@@ -115,3 +115,8 @@ body, html {
   .logos {
     width: 50px;
   }
+
+  .left_cont {
+    width:50%;
+    float: left;
+  }
