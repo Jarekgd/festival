@@ -12,6 +12,7 @@ html {
   font-size: 100%;
   color: #FCFCA6;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 nav {
@@ -108,7 +109,7 @@ a:hover {
 #main-title {
   text-align: center;
   position: relative;
-  top: 8%;
+  top: 7%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 4vh;
@@ -117,17 +118,17 @@ a:hover {
 #main-date {
   text-align: center;
   position: relative;
-  top: 7%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.5em;
   line-height: 50%;
 }
 
-.update{
+#countdown{
   text-align: center;
   position: relative;
-  top: 65%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.5em;
@@ -167,7 +168,6 @@ td {
   padding: 1vh;
   font-size: 1.5vh;
 }
-
 
 
 .container {
@@ -212,6 +212,26 @@ td {
 }
 
 
+.column-triple div{
+  padding: 10px;
+}
+
+
+h3{
+  padding: 20px;
+}
+
+
+#contact .container .left {
+  display: flex;
+  justify-content: center;
+}
+
+
+.img_map {
+  width: 80%;
+}
+
 #faq {
   height: 80%;
   margin-bottom: 40px;
@@ -245,7 +265,6 @@ td {
     visibility: hidden;
     display: none;
   }
-
 
 
   #main-title {
