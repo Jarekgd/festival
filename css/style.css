@@ -241,8 +241,14 @@ h3{
   margin-left: 40px;
 }
 
-#faq .left ol{
+#faq ol li{
   cursor: pointer;
+  padding: 10px;
+}
+
+#faq .right{
+  color: rgb(246, 191, 124);
+ background-color: #252323;
 }
 
 .logos {
@@ -334,7 +340,7 @@ footer{
   }
 
   #faq ol li{
-    padding: 5px;
+    padding: 10px;
   }
 
   footer{
