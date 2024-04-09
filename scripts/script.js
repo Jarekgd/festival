@@ -1,4 +1,4 @@
-let festivalDate = new Date("2024-06-24").getTime();
+let festivalDate = new Date("2025-01-20").getTime();
 let dateNow = new Date().getTime();
 let countDown = festivalDate - dateNow;
 let days = Math.round(countDown/(1000*3600*24));
@@ -17,6 +17,9 @@ if (days > 1){
     document.getElementById("countdown").innerHTML="Festival begins today!";
   }
 
+function onLoad(){
+  confirm("Tis page is using cookies. Do you allow?");
+}
 
 function toggleDropdown() {
     document.getElementById("myDropdown").classList.toggle("show");

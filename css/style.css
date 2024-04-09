@@ -343,10 +343,15 @@ footer{
     padding: 10px;
   }
 
+  #faq .right{
+    color: rgb(246, 191, 124);
+   background-color: rgb(5, 5, 5);
+  }
+
   footer{
     display: flex;
     flex-direction: row;
-    background-color: #1d1d1b;
+    background-color: #050505;
     padding: 10px;
     justify-content: space-between;
   }
