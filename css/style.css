@@ -97,6 +97,15 @@ a:hover {
   display: block;
 }
 
+#cookie-banner{
+  position: fixed;
+  bottom: 40px;
+  left:40px;
+  background-color: rgb(247, 147, 152);
+  color: #050505;
+  padding: 20px;
+}
+
 
 #main {
   background-image: url("../img/bgimg1a.jpg");
@@ -175,10 +184,14 @@ td {
   text-align: center;
   margin-top: 5%;
   flex-direction: column;
+  width: 80%;
+  margin-left: 50px;
 }
 
 .left {
   display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
 }
 
 .img_left {
@@ -198,6 +211,8 @@ td {
   text-align: justify;
   line-height: 30px;
   padding: 20px;
+  margin-top: 0px;
+  justify-content: space-around;
 }
 
 
@@ -331,6 +346,11 @@ footer{
     flex-direction: row;
     padding: 0px 20px;  
     justify-content: space-around;
+  }
+
+  h3 {
+    margin: 0px;
+    padding: 0px;
   }
 
   .column-triple{

@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/11edfe8d81.js" crossorigin="anonymous"></script>
 </head>
 
-<body onload="onLoad()">
+<body>
     <nav>
         <div class="logo">
             <a href="index.html#main"><img src="./img/logo.png" alt="logo" height="30px"></a>
@@ -46,13 +46,17 @@
         <div id="main-title">
             <h1>Contemporary Jazz Festival</h1>
         </div>
-        <div id="main-date">24.06.2024</div>
+        <div id="main-date">20.01.2025</div>
         <div id="countdown">10 days left</div>
-
+        
     </section>
-    
+    <div id="cookie-banner">
+        <h4>Warning!</h4>
+        <p>This page usees cookies.</p>
+        <button id="closeCookieButton" title="cookiesButton">X</button>
+    </div>
     <section id="program">
-
+        
         <h2>Program</h2>
         <table>
             <tr>
@@ -180,22 +184,19 @@
             <div class="left">
                 <form>
                     <label for="name">Your name:</label><br>
-                    <input type="text" id="name" name="name"><br>
+                    <input type="text" id="name" name="name" autocomplete="given-name" required><br>
                     <label for="email">Your email:</label><br>
-                    <input type="text" id="email" name="email"><br>
+                    <input type="text" id="email" name="email" type="email" autocomplete="off" required><br>
                     <label for="subject">Subject:</label><br>
                     <input type="text" id="subject" name="subject"><br>
                     <label for="message">Message:</label><br>
-                    <textarea name="message" rows="6" title="message"></textarea><br>
+                    <textarea name="message" rows="6" title="message" id="message"></textarea><br>
 
                     <input type="button" value="Send">
                 </form>
             </div>
             <div class="right">
-                <figure>
-                <figcaption><h3>Map</h3></figcaption>
                 <img src="./img/map.jpg" title="map" class="img_map">
-            </figure>
             </div>
         </div>
     </section>
@@ -214,7 +215,7 @@
             </div>
             
             <div class="right">
-                <p id="answer">Here will be answers for the questions.</p>
+                <p id="answer">Click on question.</p>
             </div>
             </div>
     </section>
