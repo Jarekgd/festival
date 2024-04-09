@@ -118,7 +118,7 @@ a:hover {
 #main-date {
   text-align: center;
   position: relative;
-  top: 5%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.5em;
@@ -128,7 +128,7 @@ a:hover {
 #countdown{
   text-align: center;
   position: relative;
-  top: 75%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 2.5em;
@@ -241,12 +241,20 @@ h3{
   margin-left: 40px;
 }
 
+#faq .left ol{
+  cursor: pointer;
+}
+
 .logos {
   width: 50px;
   padding: 10px;
 }
 
-
+footer{
+  padding: 10px;
+  font-size: 10px;
+  font-style: italic;
+}
 
 
 @media only screen and (min-width: 1000px) {
@@ -316,6 +324,7 @@ h3{
     display: flex;
     flex-direction: row;
     padding: 0px 20px;  
+    justify-content: space-around;
   }
 
   .column-triple{
@@ -326,6 +335,14 @@ h3{
 
   #faq ol li{
     padding: 5px;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #1d1d1b;
+    padding: 10px;
+    justify-content: space-between;
   }
 
 }
