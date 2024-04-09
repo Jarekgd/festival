@@ -15,31 +15,22 @@
         <div class="logo">
             <a href="index.html#main"><img src="./img/logo.png" alt="logo" height="30px"></a>
         </div>
+        <input type="checkbox" id="check" title="checkbox" unchecked>
+        <label for="check" class="chckbtn">
+            <i class="fas fa-bars"></i>
+        </label>
         <ul>
-            <li><a href="index.html#main">home</a></li>
-            <li><a href="index.html#program">program</a></li>
-            <li><a href="index.html#musicians">musicians</a></li>
-            <li><a href="index.html#scenes">scenes</a></li>
-            <li><a href="index.html#events">events</a></li>
-            <li><a href="index.html#quizzes">quizzes</a></li>
-            <li><a href="index.html#archive">archive</a></li>
-            <li><a href="index.html#contact">contact</a></li>
-            <li><a href="index.html#faq">faq</a></li>
+            <li><a href="#main">home</a></li>
+            <li><a href="#program">program</a></li>
+            <li><a href="#musicians">musicians</a></li>
+            <li><a href="#scenes">scenes</a></li>
+            <li><a href="#events">events</a></li>
+            <li><a href="#quizzes">quizzes</a></li>
+            <li><a href="#archive">archive</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="#faq">faq</a></li>
+
         </ul>
-        <div class="dropdown">
-            <div class="fas fa-bars" onclick="toggleDropdown()"></div>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="index.html#main">home</a>
-                <a href="index.html#program">program</a>
-                <a href="index.html#musicians">musicians</a>
-                <a href="index.html#scenes">scenes</a>
-                <a href="index.html#events">events</a>
-                <a href="index.html#quizzes">quizzes</a>
-                <a href="index.html#archive">archive</a>
-                <a href="index.html#contact">contact</a>
-                <a href="index.html#faq">faq</a>
-            </div>
-        </div>
     </nav>
 
 
@@ -48,10 +39,8 @@
             <h1>Contemporary Jazz Festival</h1>
         </div>
         <div id="main-date">24.06.2024</div>
-        <div class="update">10 days left</div>
 
     </section>
-    
     <section id="program">
 
         <h2>Program</h2>
@@ -108,7 +97,6 @@
             </tr>
         </table>
     </section>
-
     <section id="musicians">
         <h2>Musicians</h2>
         <div class="container">
@@ -123,7 +111,6 @@
             </div>
         </div>
     </section>
-   
     <section id="scenes">
         <h2>Scenes</h2>
         <div class="container">
@@ -139,7 +126,7 @@
         </div>
     </section>
     <section id="events">
-        <div><h2>Other events</h2></div>
+        <h2>Other events</h2>
         <div class="container">
             <div class="left">
                 <a href="events.html"><img src="./img/b9a.jpg" class="img_left" alt="image"></a>
@@ -174,11 +161,10 @@
             </div>
         </div>
     </section>
-    
     <section id="contact">
         <h2>Contact</h2>
         <div class="container">
-            <div class="left">
+            <div class="left_cont">
                 <form>
                     <label for="name">Your name:</label><br>
                     <input type="text" id="name" name="name"><br>
@@ -192,18 +178,16 @@
                     <input type="button" value="Send">
                 </form>
             </div>
-            <div class="right">
-                <figure>
-                <figcaption><h3>Map</h3></figcaption>
+            <div class="right_cont">
+                <h3>Map</h3>
                 <img src="./img/map.jpg" title="map" class="img_map">
-            </figure>
             </div>
         </div>
     </section>
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="container">
-            <div class="left">
+            <div class="left_cont">
                 <ol>
                     <li>Where to buy tickets?</li>
                     <li>What happends if I miss a concert?</li>
@@ -213,9 +197,8 @@
                     <li>What is your favourite color?</li>
                 </ol>
             </div>
-            <div class="right">
+            <div class="right_cont">
                 Here will be answers for the questions.
-            </div>
             </div>
     </section>
     <footer>
@@ -229,8 +212,8 @@
             <a href="#" target="_blank" title="Youtube"><img src="./img/you.png" class="logos" alt="" logo></a>
             <a href="#" target="_blank" title="Instagram"><img src="./img/inst.png" class="logos" alt="" logo></a>
             <a href="#" target="_blank" title="TicToc"><img src="./img/tic.png" class="logos" alt="" logo></a>
-    </footer> 
-    
+    </footer>
+    </div>
 
     <script src="scripts/script.js"></script>
 

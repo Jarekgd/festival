@@ -12,10 +12,6 @@
         <div class="logo">
             <a href="index.html#main"><img src="./img/logo.png" alt="logo" height="30px"></a>
         </div>
-        <input type="checkbox" id="check">
-        <label for="check" class="chckbtn">
-            <i class="fas fa-bars"></i>
-        </label>
         <ul>
             <li><a href="index.html#main">home</a></li>
             <li><a href="index.html#program">program</a></li>
@@ -26,37 +22,50 @@
             <li><a href="index.html#archive">archive</a></li>
             <li><a href="index.html#contact">contact</a></li>
             <li><a href="index.html#faq">faq</a></li>
-        
         </ul>
+        <div class="dropdown">
+            <div class="fas fa-bars" onclick="toggleDropdown()"></div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html#main">home</a>
+                <a href="index.html#program">program</a>
+                <a href="index.html#musicians">musicians</a>
+                <a href="index.html#scenes">scenes</a>
+                <a href="index.html#events">events</a>
+                <a href="index.html#quizzes">quizzes</a>
+                <a href="index.html#archive">archive</a>
+                <a href="index.html#contact">contact</a>
+                <a href="index.html#faq">faq</a>
+            </div>
+        </div>
     </nav>
     <section class="triple">
         <h2>Scenes</h2>
-        <div class="flex-container">
+        <div class="container">
             <div class="column-triple">
-                <img src="./img/b6a.jpg" class="img_left" alt="image">
                 <div>
                     <h3>The main scene</h3>
-                    <p>
+                    <img src="./img/b6a.jpg" class="img_left" alt="image">
+                </div>
+                <div>
                         The biggest names appear on the main scene. 
-                    </p>
                 </div>
             </div>
             <div class="column-triple">
-                <img src="./img/st2a.jpg" class="img_left" alt="image">
                 <div>
                     <h3>Small scene</h3>
-                    <p>
+                    <img src="./img/st2a.jpg" class="img_left" alt="image">
+                </div>
+                <div>
                         The Small Scene is located nearby, and you see ther more intersting musicians.
-                </p>
                 </div>
             </div>
             <div class="column-triple">
-                <img src="./img/sta.jpg" class="img_left" alt="image">
                 <div>
                     <h3>Alternative scene</h3>
-                    <p>
-                        Alternative scene presents experimental ways of treating jazz music - electronic, ethnic influances.
-                    </p>
+                    <img src="./img/sta.jpg" class="img_left" alt="image">
+                </div>
+                <div>
+                    Alternative scene presents experimental ways of treating jazz music - electronic, ethnic influances.
                 </div>
             </div>
         </div>
