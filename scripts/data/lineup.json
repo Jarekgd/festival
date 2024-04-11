@@ -1,0 +1,139 @@
+{
+    "musicians": [
+        {
+            "name": "B.B. Grant",
+            "scene": "main",
+            "genre": "bebop"
+        },
+        {
+            "name": "DJ Eskimos",
+            "scene": "main",
+            "genre": "electro jazz"
+        },
+        {
+            "name": "Ramzes & The Hooligans",
+            "scene": "main",
+            "genre": "swing"
+        },
+        {
+            "name": "Brasiliera Diri-Donga",
+            "scene": "main",
+            "genre": "latin jazz"
+        },
+        {
+            "name": "Fred Pauter Jr",
+            "scene": "main",
+            "genre": "bebop"
+        },
+        {
+            "name": "Manchester Groove Five",
+            "scene": "main",
+            "genre": "funk jazz"
+        },
+        {
+            "name": "Free Kaka Orchestra",
+            "scene": "main",
+            "genre": "ethnic jazz"
+        },
+        {
+            "name": "Debby Burak Quintet",
+            "scene": "main",
+            "genre": "bebop"
+        },
+        {
+            "name": "The Kobitas",
+            "scene": "main",
+            "genre": "fsmooth jazz"
+        },
+        {
+            "name": "Elvira Marocco",
+            "scene": "small",
+            "genre": "ethnic jazz"
+        },
+        {
+            "name": "Jan Pietrucha",
+            "scene": "small",
+            "genre": "swing"
+        },
+        {
+            "name": "Solent Blues Band",
+            "scene": "small",
+            "genre": "swing"
+        },
+        {
+            "name": "Roberto Muchios Gracias",
+            "scene": "small",
+            "genre": "latin jazz"
+        },
+        {
+            "name": "Gypsy Electro Jazz",
+            "scene": "small",
+            "genre": "electro jazz"
+        },
+        {
+            "name": "H.W.D.P. Quartet",
+            "scene": "small",
+            "genre": "swing"
+        },
+        {
+            "name": "Easy Swing Band",
+            "scene": "small",
+            "genre": "swing"
+        },
+        {
+            "name": "Ubu Fobidi Cama",
+            "scene": "small",
+            "genre": "ethnic jazz"
+        },
+        {
+            "name": "FC Nachel Green",
+            "scene": "small",
+            "genre": "funk jazz"
+        },
+        {
+            "name": "Edun Jazz Band",
+            "scene": "alternative",
+            "genre": "bebop"
+        },
+        {
+            "name": "Julian McClattney",
+            "scene": "alternative",
+            "genre": "smooth jazz"
+        },
+        {
+            "name": "The Mustaches",
+            "scene": "alternative",
+            "genre": "funk jazz"
+        },
+        {
+            "name": "Hindi Hara Kira",
+            "scene": "alternative",
+            "genre": "ethnic jazz"
+        },
+        {
+            "name": "Emilia Johanni",
+            "scene": "alternative",
+            "genre": "smooth jazz"
+        },
+        {
+            "name": "Rusel Carpet feat. Anna Maria Jovanni",
+            "scene": "alternative",
+            "genre": "bebop"
+        },
+        {
+            "name": "DJ Funk Srank",
+            "scene": "alternative",
+            "genre": "electro jazz"
+        },
+        {
+            "name": "Tress Stress Assamble",
+            "scene": "alternative",
+            "genre": "bebop"
+        },
+        {
+            "name": "Steve Clabby & The Pelicans",
+            "scene": "alternative",
+            "genre": "swing"
+        }
+    ]
+}

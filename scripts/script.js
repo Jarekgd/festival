@@ -62,3 +62,31 @@ window.onclick = function(event) {
   function faq6(){
     document.getElementById("answer").innerHTML="My favourite color is rgb(75,12,68)";
   }
+// AJAX JSON linep
+// create listener:
+
+document.getElementById("ajax").addListener =('load', loadText());
+// document.getElementById("ajax").onload =loadText();
+function loadText(){
+  // create XHR object
+  var xhr = new XMLHttpRequest();
+  //  open (type, url/file, async)
+  xhr.open('GET', 'description.txt', true);
+  xhr.onload = function(){
+    if(this.status == 200){
+      document.getElementById('ajax').innerHTML = this.responseText
+    }
+  }
+  xhr.onerror = function(){
+    console.log('Request err...');
+  }
+  // send request
+  xhr.send();
+}
+
+
+
+  // form validation
+
+  
+
