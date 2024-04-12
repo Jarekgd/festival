@@ -171,26 +171,6 @@ section{
 flex-direction: column;
 }
 
-table {
-  width: 80%;
-  height: 70%;
-  background-color: #701103;
-  padding: 10px;
-  text-align: center;
-  margin: auto;
-}
-
-th {
-  border-bottom: #FCFCA6 1px solid;
-}
-
-th,
-td {
-  padding: 1vh;
-  font-size: 1.5vh;
-}
-
-
 .container {
   display: flex;
   text-align: center;
@@ -335,6 +315,10 @@ footer{
     line-height: 50%;
   }
 
+  .section{
+    flex-direction: row;
+  }
+
   #lineup{
     column-count: 3;
     text-align: center;
@@ -407,6 +391,7 @@ footer{
   .column-triple{
     padding: 10px;
     width: 100%;
+    
   }
 
   #faq ol li{

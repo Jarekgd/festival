@@ -11,7 +11,7 @@ function loadMusiciansDescriptions() {
       let output1 = "";
       for (var i in musician) {
         output1 += "<div><img src=" + musician[i].image +" width='200px'></a>" +"<div>" +   musician[i].name + "</div>" + 
-        "<div>" + musician[i].genre + "</div>" +"</div>";
+        "<div style='font-size: 10px'>" + musician[i].description + "</div>" +"</div>";
         document.getElementById("musDesc").innerHTML = output1;
       }
     }
