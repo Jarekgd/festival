@@ -101,7 +101,7 @@ a:hover {
   position: fixed;
   bottom: 40px;
   left:40px;
-  background-color: rgb(247, 147, 152);
+  background-color: rgb(221, 247, 222);
   color: #050505;
   padding: 20px;
   box-shadow: 3px 3px 6px rgb(26, 26, 26);
@@ -325,6 +325,18 @@ footer{
     line-height: 50%;
   }
 
+  #lineup{
+    column-count: 3;
+    text-align: center;
+  }
+
+  #lineup ul li{
+    text-decoration: none;
+    padding: 20px;
+  }
+    
+  
+
   .container {
     flex-direction: row;
     
@@ -346,7 +358,7 @@ footer{
 
   .left img:hover {
     opacity: 70%;
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
   }
 
   .right {
@@ -388,7 +400,12 @@ footer{
     flex-direction: row;
     background-color: #050505;
     padding: 10px;
-    justify-content: space-between;
+  }
+  footer .left{
+justify-content: left;
   }
 
+  footer .right{
+    justify-content: right;
+  }
 }
