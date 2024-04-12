@@ -392,6 +392,16 @@ footer{
 
   #musDesc{
    margin-top: 10px;
+   display: flex;
+   flex-wrap: wrap;
+   width:100%;
+   justify-content: left;
+   
+  }
+
+  #musDesc > div{
+    width:250px;
+    margin: 20px;
   }
 
   .column-triple{

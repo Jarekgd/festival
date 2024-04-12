@@ -10,12 +10,9 @@ function loadMusiciansDescriptions() {
       let musician = JSON.parse(this.responseText);
       let output1 = "";
       for (var i in musician) {
-        output1 += "<ul>" + "<li>" + musician[i].name + "</li>" + 
-        "<li>" + musician[i].genre + "</li>" +
-        "<li>" + "<img src=" + musician[i].image +" width='150px'></a>"  + "</li>" +
-        "</ul>"+"<br>";
+        output1 += "<div><img src=" + musician[i].image +" width='200px'></a>" +"<div>" +   musician[i].name + "</div>" + 
+        "<div>" + musician[i].genre + "</div>" +"</div>";
         document.getElementById("musDesc").innerHTML = output1;
-        
       }
     }
   };
