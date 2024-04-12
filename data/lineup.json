@@ -150,42 +150,42 @@
             "name": "Hindi Hara Kira",
             "scene": "alternative",
             "genre": "ethnic jazz",
-            "image": "./imghara.jpg",
+            "image": "./img/hara.jpg",
             "description": "Briliant fusion of traditional jazz with traditional folk harmony. You have never heard that kind of music before."
         },
         {
             "name": "Emilia Johanni",
             "scene": "alternative",
             "genre": "smooth jazz",
-            "image": "./emilia.jpg",
+            "image": "./img/emilia.jpg",
             "description": "Emilia Johanni is a singer with silk smooth voice, singing old facioned smooth jazz. "
         },
         {
             "name": "Rusel Carpet feat. Anna Maria Jovanni",
             "scene": "alternative",
             "genre": "bebop",
-            "image": "./rusel.jpg",
+            "image": "./img/rusel.jpg",
             "description": "Legendary Rusel Rarpet Band with legendary Anna Maria Jovanni. This must be something incedibly good."
         },
         {
             "name": "DJ Funk Srank",
             "scene": "alternative",
             "genre": "electro jazz",
-            "image": "./dj.jpg",
+            "image": "./img/dj.jpg",
             "description": "Jazz DJ is not what you could expect during our festival, but yes, he is so good."
         },
         {
             "name": "Tress Stress Assamble",
             "scene": "alternative",
             "genre": "bebop",
-            "image": "./tress.jpg",
+            "image": "./img/tress.jpg",
             "description": "The band one of the kind. All proffesional musicians playing and singing the best they can."
         },
         {
             "name": "Steve Clabby & The Pelicans",
             "scene": "alternative",
             "genre": "swing",
-            "image": "./b1a.jpg",
+            "image": "./img/b1a.jpg",
             "description": "The Pelicans are back! After 8 years they are on stage together again with Steve Clabby on mandolin."
         }
     ]

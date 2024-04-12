@@ -63,22 +63,17 @@ function faq6() {
   document.getElementById("answer").innerHTML =
     "My favourite color is rgb(75,12,68)";
 }
+
+
 // AJAX JSON linep
-// create listener:
-
 document.getElementById("lineup").addListener = ("load", loadMusicians());
-// document.getElementById("ajax").onload =loadText();
-
 function loadMusicians() {
-  // create XHR object
-  var xhr = new XMLHttpRequest();
-  //  open (type, url/file, async)
+  let xhr = new XMLHttpRequest();
   xhr.open("GET", "./data/lineup.json", true);
   xhr.onload = function () {
     if (this.status == 200) {
-      // var musician = document.getElementById('lineup').innerHTML = this.responseText;
-      var musicians = JSON.parse(this.responseText);
-      var output = "";
+      let musicians = JSON.parse(this.responseText);
+      let output = "";
       for (var i in musicians) {
         output += "<ul>" + "<li>" + musicians[i].name + "</li>" + "</ul>";
         document.getElementById("lineup").innerHTML = output;
@@ -88,7 +83,27 @@ function loadMusicians() {
   xhr.onerror = function () {
     console.log("Request error...");
   };
-  // send request
+  xhr.send();
+}
+
+// AJAX JSON musicians description
+document.getElementById("musDesc").addListener = ("load", loadMusiciansDescriptions());
+function loadMusiciansDescriptions() {
+  let xhr1 = new XMLHttpRequest();
+  xhr1.open("GET", "./data/lineup.json", true);
+  xhr1.onload = function () {
+    if (this.status == 200) {
+      let musician = JSON.parse(this.responseText);
+      let output1 = "";
+      for (var i in musician) {
+        output1 += "<ul>" + "<li>" + musician[i].name + "</li>" + "</ul>";
+        document.getElementById("musDesc").innerHTML = output1;
+      }
+    }
+  };
+  xhr1.onerror = function () {
+    console.log("Request error...");
+  };
   xhr.send();
 }
 

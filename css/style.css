@@ -154,6 +154,16 @@ h2 {
   font-size: 2em;
 }
 
+#lineup{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#lineup ul li{
+  padding: 10px;
+}
+
 section{
   display: flex;
   height: 100%;
@@ -328,6 +338,8 @@ footer{
   #lineup{
     column-count: 3;
     text-align: center;
+    flex: none;
+    display: block;
   }
 
   #lineup ul li{
@@ -335,7 +347,6 @@ footer{
     padding: 20px;
   }
     
-  
 
   .container {
     flex-direction: row;
@@ -377,11 +388,13 @@ footer{
 
   h3 {
     margin: 0px;
-    
+  }
+
+  #musDesc{
+   margin-top: 10px;
   }
 
   .column-triple{
-    
     padding: 10px;
     width: 100%;
   }
