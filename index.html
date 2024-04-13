@@ -15,35 +15,52 @@
         <div class="logo">
             <a href="index.html#main"><img src="./img/logo.png" alt="logo" height="30px"></a>
         </div>
-        <input type="checkbox" id="check" title="checkbox" unchecked>
-        <label for="check" class="chckbtn">
-            <i class="fas fa-bars"></i>
-        </label>
         <ul>
-            <li><a href="#main">home</a></li>
-            <li><a href="#program">program</a></li>
-            <li><a href="#musicians">musicians</a></li>
-            <li><a href="#scenes">scenes</a></li>
-            <li><a href="#events">events</a></li>
-            <li><a href="#quizzes">quizzes</a></li>
-            <li><a href="#archive">archive</a></li>
-            <li><a href="#contact">contact</a></li>
-            <li><a href="#faq">faq</a></li>
-
+            <li><a href="index.html#main">home</a></li>
+            <li><a href="index.html#program">program</a></li>
+            <li><a href="index.html#musicians">musicians</a></li>
+            <li><a href="index.html#scenes">scenes</a></li>
+            <li><a href="index.html#events">events</a></li>
+            <li><a href="index.html#quizzes">quizzes</a></li>
+            <li><a href="index.html#archive">archive</a></li>
+            <li><a href="index.html#contact">contact</a></li>
+            <li><a href="index.html#faq">faq</a></li>
         </ul>
+        <div class="dropdown">
+            <div class="fas fa-bars" onclick="toggleDropdown()"></div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="index.html#main">home</a>
+                <a href="index.html#program">program</a>
+                <a href="index.html#musicians">musicians</a>
+                <a href="index.html#scenes">scenes</a>
+                <a href="index.html#events">events</a>
+                <a href="index.html#quizzes">quizzes</a>
+                <a href="index.html#archive">archive</a>
+                <a href="index.html#contact">contact</a>
+                <a href="index.html#faq">faq</a>
+            </div>
+        </div>
     </nav>
-
 
     <section id="main">
         <div id="main-title">
             <h1>Contemporary Jazz Festival</h1>
         </div>
-        <div id="main-date">24.06.2024</div>
-
+        <div id="main-date">20.01.2025</div>
+        <div id="countdown">10 days left</div>
+        
     </section>
+    <div id="cookie-banner">
+        <h4>Warning!</h4>
+        <p>This page uses cookies.</p>
+        <button id="closeCookieButton" title="cookiesButton">X</button>
+    </div>
     <section id="program">
-
         <h2>Program</h2>
+        <hr>
+        <div id="lineup"></div>
+        
+        <!-- 
         <table>
             <tr>
                 <th>Main scene</th>
@@ -56,8 +73,8 @@
                 <td>Edun Jazz Band</td>
             </tr>
             <tr>
-                <td>DJ Eskimos</td>
-                <td>Jan Pietrucha</td>
+                <td>DJ Eskimo</td>
+                <td>Krzysztof Pietrucha</td>
                 <td>Julian McClattney</td>
             </tr>
             <tr>
@@ -67,7 +84,7 @@
             </tr>
             <tr>
                 <td>Brasiliera Diri-Donga</td>
-                <td>Robertos Muchios gracias</td>
+                <td>Robertos Muchios Gracias</td>
                 <td>Hindi Hara Kira</td>
             </tr>
             <tr>
@@ -77,7 +94,7 @@
             </tr>
             <tr>
                 <td>Manchester Groove Five</td>
-                <td>H.G.W Quartet</td>
+                <td>H.W.D.P. Quartet</td>
                 <td>Rusel Carpet <br>feat. Anna Maria Jovanni </td>
             </tr>
             <tr>
@@ -95,13 +112,16 @@
                 <td>FC Nachel Green</td>
                 <td>Steve Clabby & The Pelicans</td>
             </tr>
-        </table>
+        </table> -->
     </section>
+
     <section id="musicians">
         <h2>Musicians</h2>
         <div class="container">
             <div class="left">
-                <a href="musicians.html"><img src="./img/b4a.jpg" class="img_left" alt="image"></a>
+                
+                <a href="musicians.html"><img src="./img/b4a.jpg" class="img_left" alt="image" title="musicians"></a>
+            
             </div>
             <div class="right">
                 This year we have invited top musician representing different styles of jazz music.
@@ -111,11 +131,14 @@
             </div>
         </div>
     </section>
+   
     <section id="scenes">
         <h2>Scenes</h2>
         <div class="container">
             <div class="left">
-                <a href="scenes.html"><img src="./img/b6a.jpg" class="img_left" alt="image"></a>
+                <div class="bgimg">
+                <a href="scenes.html"><img src="./img/b6a.jpg" class="img_left" alt="image" title="scenes"></a>
+            </div>
             </div>
             <div class="right">
                 Our artists will give performances on three stages.
@@ -126,10 +149,12 @@
         </div>
     </section>
     <section id="events">
-        <h2>Other events</h2>
+        <div><h2>Other events</h2></div>
         <div class="container">
             <div class="left">
-                <a href="events.html"><img src="./img/b9a.jpg" class="img_left" alt="image"></a>
+                <div class="bgimg">
+                <a href="events.html"><img src="./img/b9a.jpg" class="img_left" alt="image" title="events"></a>
+            </div>
             </div>
             <div class="right">
                 There are aditional events in the city like films projections - all about jazz music, discussions and
@@ -142,7 +167,9 @@
         <h2>Quizzes</h2>
         <div class="container">
             <div class="left">
-                <a href="quizzes.html"><img src="./img/q1a.jpg" class="img_left" alt="image"></a>
+                <div class="bgimg">
+                <a href="quizzes.html"><img src="./img/q1a.jpg" class="img_left" alt="image"  title="qizzes"></a>
+                </div>
             </div>
             <div class="right">
                 Try our quizzes about jazz music, jazz history or general music knowledge.
@@ -161,25 +188,25 @@
             </div>
         </div>
     </section>
+    
     <section id="contact">
         <h2>Contact</h2>
         <div class="container">
-            <div class="left_cont">
+            <div class="left">
                 <form>
                     <label for="name">Your name:</label><br>
-                    <input type="text" id="name" name="name"><br>
+                    <input type="text" id="name" name="name" autocomplete="given-name" required><br>
                     <label for="email">Your email:</label><br>
-                    <input type="text" id="email" name="email"><br>
+                    <input type="text" id="email" name="email" type="email" autocomplete="off" required><br>
                     <label for="subject">Subject:</label><br>
                     <input type="text" id="subject" name="subject"><br>
                     <label for="message">Message:</label><br>
-                    <textarea name="message" rows="6" title="message"></textarea><br>
+                    <textarea name="message" rows="6" title="message" id="message"></textarea><br>
 
                     <input type="button" value="Send">
                 </form>
             </div>
-            <div class="right_cont">
-                <h3>Map</h3>
+            <div class="right">
                 <img src="./img/map.jpg" title="map" class="img_map">
             </div>
         </div>
@@ -187,22 +214,24 @@
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="container">
-            <div class="left_cont">
+            <div class="left">
                 <ol>
-                    <li>Where to buy tickets?</li>
-                    <li>What happends if I miss a concert?</li>
-                    <li>Is it restricted to wear colorfull clothes?</li>
-                    <li>May I bring my own alcohol?</li>
-                    <li>How drunk can I be during events?</li>
-                    <li>What is your favourite color?</li>
+                    <li onclick="faq1()">Where to buy tickets?</li>
+                    <li onclick="faq2()">What happends if I miss a concert?</li>
+                    <li onclick="faq3()">Is it restricted to wear colorfull clothes?</li>
+                    <li onclick="faq4()">May I bring my own alcohol?</li>
+                    <li onclick="faq5()">Are there any restrictions for children?</li>
+                    <li onclick="faq6()">What is your favourite color?</li>
                 </ol>
             </div>
-            <div class="right_cont">
-                Here will be answers for the questions.
+            
+            <div class="right">
+                <p id="answer">Click on question.</p>
+            </div>
             </div>
     </section>
+    <hr>
     <footer>
-        <hr>
         <div class="left">
             <p>Copyright &copy Glod & Jaro Entertainmant.<br>All rights reserved.</p>
         </div>
@@ -212,8 +241,8 @@
             <a href="#" target="_blank" title="Youtube"><img src="./img/you.png" class="logos" alt="" logo></a>
             <a href="#" target="_blank" title="Instagram"><img src="./img/inst.png" class="logos" alt="" logo></a>
             <a href="#" target="_blank" title="TicToc"><img src="./img/tic.png" class="logos" alt="" logo></a>
-    </footer>
-    </div>
+    </footer> 
+    
 
     <script src="scripts/script.js"></script>
 
