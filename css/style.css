@@ -1,3 +1,11 @@
+* {
+  
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body,
 html {
   background-color: black;
@@ -5,62 +13,51 @@ html {
   font-size: 100%;
   color: #FCFCA6;
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
-#main {
-  background-image: url("../img/bgimg1a.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#main-title {
-  text-align: center;
-  position: relative;
-  top: 8%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.5em;
-  line-height: 50%;
-}
-
-.main-counter {
-  visibility: hidden;
-}
-
-h2 {
-  text-align: center;
-  font-size: 2em;
+#full-container {
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
   position: fixed;
-  text-align: center;
-  background-color: black;
   width: 100%;
+  background: black;
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
   z-index: 1;
-  font-size: 1em;
 }
 
-.nav-logo {
-  float: left;
+nav ul {
+  display: flex;
+  list-style: none;
 }
 
-.links-left {
-  float: right;
-  padding: 5px 20px;
-}
 
 nav ul li {
-  display: inline;
-  padding-right: 30px;
+  margin: 0px 15px;
+
 }
 
-a {
+nav ul li a {
+  color: #FCFCA6;
   text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  /* letter-spacing: 2px; */
+}
+
+.fa-bars {
+  font-size: 30px;
+  display: none;
+}
+
+#check {
+  display: none;
 }
 
 a:link {
@@ -78,13 +75,47 @@ a:hover {
 section {
   height: 100%;
   padding-top: 50px;
+}
 
+#main {
+  background-image: url("../img/bgimg1a.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main-title {
+  text-align: center;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  line-height: 50%;
+}
+
+#main-date {
+  text-align: center;
+  position: relative;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  line-height: 50%;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 2em;
 }
 
 table {
   width: 90%;
   height: 70%;
-  /* background-color: #701103; */
+  background-color: #701103;
   padding: 15px;
   text-align: center;
   margin: auto;
@@ -92,23 +123,22 @@ table {
 
 th {
   border-bottom: #FCFCA6 1px solid;
-  color: #fffff1;
-  font-size: 1.5em;
 }
 
 th,
 td {
-  padding: 00px;
+  padding: 2vh;
+  font-size: 2vh;
 }
 
-.left {
+/* .left {
   width: 70%;
   float: left;
 }
 
 .img_left {
   width: 80%;
-}
+} */
 
 .img_map {
   width: 30%;
@@ -123,13 +153,19 @@ td {
   line-height: 50px;
 }
 
-
 .container {
-  width: 80%;
+  /* width: 80%; */
   text-align: center;
   margin-top: 5%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
+.container > div {
+margin: 50px;
+}
+/* 
 .container::after {
   content: "";
   display: table;
@@ -141,7 +177,7 @@ td {
   width: 33%;
   text-align: justify;
 
-}
+} */
 
 #faq {
   height: 80%;
@@ -179,53 +215,48 @@ td {
   width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
-
-  body,
-  html {
-    font-size: 70%;
-  }
-
-  #main {
-    background-image: url("../img/bgimg1a.jpg");
-    height: 80%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  #main-title {
+@media screen and (max-width: 950px) {
+  nav ul {
+    position: fixed;
+    top: 80px;
+    background-color: rgb(22, 21, 21);
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    display: block;
     text-align: center;
-    position: relative;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1em;
-    line-height: 50%;
+    font-size: 2vh;
+    transition: all .7s;
   }
 
-  h2 {
-    text-align: center;
-    font-size: 2em;
+  #check {
+    display: none;
   }
 
-  .main-description {
-    visibility: visible;
-    text-align: center;
-    height: 40%;
+  #check:checked~ul {
+    left: 0;
   }
 
-  table {
-    width: 90%;
-    height: 80%;
-    /* background-color: #701103; */
-    padding: 5px;
-    text-align: center;
-    margin: auto;
+  #check:checked~.chckbtn i:before {
+    content: "\f00d";
   }
 
-  th,
-  td {
-    padding: 5px;
+  nav ul li {
+    margin: 10px;
+
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    display: block;
+    padding: 20px;
+  }
+
+  .fa-bars {
+    display: block;
+  }
+
+  .container{
+    flex-direction: column;
   }
 }
