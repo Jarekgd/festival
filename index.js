@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const PORT = 5000;
+const cookie = require("cookie-parser");
+const PORT = process.env.PORT || 5000;
 
 app.set("View engine", "ejs");
 // Placement of static files:
