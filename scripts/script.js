@@ -1,4 +1,4 @@
-let festivalDate = new Date("2025-01-20").getTime();
+let festivalDate = new Date("2024-06-20").getTime();
 let dateNow = new Date().getTime();
 let countDown = festivalDate - dateNow;
 let days = Math.round(countDown / (1000 * 3600 * 24));
@@ -57,7 +57,7 @@ function faq4() {
 }
 function faq5() {
   document.getElementById("answer").innerHTML =
-    " You can bring your children if you want. We are children friendly. There is free alcohol and weed for minors.";
+    "You can bring your children if you want. We are children friendly. There is free alcohol and weed for minors.";
 }
 function faq6() {
   document.getElementById("answer").innerHTML =
@@ -87,24 +87,24 @@ function loadMusicians() {
 }
 
 // AJAX JSON musicians description
-document.getElementById("musDesc").addListener = ("load", loadMusiciansDescriptions());
-function loadMusiciansDescriptions() {
-  let xhr1 = new XMLHttpRequest();
-  xhr1.open("GET", "./data/lineup.json", true);
-  xhr1.onload = function () {
-    if (this.status == 200) {
-      let musician = JSON.parse(this.responseText);
-      let output1 = "";
-      for (var i in musician) {
-        output1 += "<ul>" + "<li>" + musician[i].name + "</li>" + "</ul>";
-        document.getElementById("musDesc").innerHTML = output1;
-      }
-    }
-  };
-  xhr1.onerror = function () {
-    console.log("Request error...");
-  };
-  xhr.send();
-}
+// document.getElementById("musDesc").addListener = ("load", loadMusiciansDescriptions());
+// function loadMusiciansDescriptions() {
+//   let xhr1 = new XMLHttpRequest();
+//   xhr1.open("GET", "./data/lineup.json", true);
+//   xhr1.onload = function () {
+//     if (this.status == 200) {
+//       let musician = JSON.parse(this.responseText);
+//       let output1 = "";
+//       for (var i in musician) {
+//         output1 += "<ul>" + "<li>" + musician[i].name + "</li>" + "</ul>";
+//         document.getElementById("musDesc").innerHTML = output1;
+//       }
+//     }
+//   };
+//   xhr1.onerror = function () {
+//     console.log("Request error...");
+//   };
+//   xhr.send();
+// }
 
 // form validation
