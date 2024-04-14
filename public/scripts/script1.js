@@ -21,7 +21,7 @@ function loadMusiciansDescriptions() {
   xhr.send();
 }
 
-fetch("./data/lineup.json")
+// fetch("./data/lineup.json")
   // .then(response => response.json())
   // .then(lineup => {
   //   let output = "";
