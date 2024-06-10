@@ -8,14 +8,14 @@ if (days > 1) {
   document.getElementById("countdown").innerHTML = days + " days left!";
 } else if (days < 0) {
   document.getElementById("countdown").innerHTML = "Festival has finished.";
-} else if (days == 1) {
+} else if (days === 1) {
   document.getElementById("countdown").innerHTML = "Festival statrs tomorrow!";
 } else {
   document.getElementById("countdown").innerHTML = "Festival begins today!";
 }
 
 // cookie banner
-document.getElementById("closeCookieButton").addEventListener("click", (e) => {
+document.getElementById("closeCookieButton").addEventListener("click", () => {
   document.getElementById("cookie-banner").style.display = "none";
 });
 
@@ -27,10 +27,10 @@ function toggleDropdown() {
 // close drop down list when click outside the button
 window.onclick = function (event) {
   if (!event.target.matches(".fa-bars")) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
+    let dropdowns = document.getElementsByClassName("dropdown-content");
+    let i;
     for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
+      let openDropdown = dropdowns[i];
       if (openDropdown.classList.contains("show")) {
         openDropdown.classList.remove("show");
       }
@@ -65,16 +65,16 @@ function faq6() {
 }
 
 
-// AJAX JSON linep
-document.getElementById("lineup").addListener = ("load", loadMusicians());
+// AJAX JSON lineup
+document.getElementById("lineup").addEventListener = ("load", loadMusicians);
 function loadMusicians() {
   let xhr = new XMLHttpRequest();
   xhr.open("GET", "./data/lineup.json", true);
   xhr.onload = function () {
-    if (this.status == 200) {
+    if (this.status === 200) {
       let musicians = JSON.parse(this.responseText);
       let output = "";
-      for (var i in musicians) {
+      for (let i in musicians) {
         output += "<ul>" + "<li>" + musicians[i].name + "</li>" + "</ul>";
         document.getElementById("lineup").innerHTML = output;
       }

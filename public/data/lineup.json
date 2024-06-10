@@ -154,14 +154,14 @@
             "description": "Briliant fusion of traditional jazz with traditional folk harmony. You have never heard that kind of music before."
         },
         {
-            "name": "Emilia Johanni",
+            "name": "Emilia Mossina",
             "scene": "alternative",
             "genre": "smooth jazz",
             "image": "./img/emilia.jpg",
             "description": "Emilia Johanni is a singer with silk smooth voice, singing old facioned smooth jazz. "
         },
         {
-            "name": "Rusel Carpet feat. Anna Maria Jovanni",
+            "name": "FatBoo feat. Anna Maria Jovanni",
             "scene": "alternative",
             "genre": "bebop",
             "image": "./img/rusel.jpg",

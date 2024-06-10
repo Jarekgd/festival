@@ -23,7 +23,7 @@ nav {
   height: 80px;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 40px;
+  padding: 0 40px;
   z-index: 1;
 }
 
@@ -32,7 +32,6 @@ nav ul {
 }
 
 nav ul li {
-  display: inline-block;
   display: none;
   padding: 0 10px;
 }
@@ -54,6 +53,10 @@ a:visited {
 }
 
 a:hover {
+  color: #88885c;
+}
+
+a:active {
   color: #88885c;
 }
 
@@ -158,6 +161,7 @@ h2 {
   text-align: center;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 #lineup ul li{
@@ -173,11 +177,10 @@ flex-direction: column;
 
 .container {
   display: flex;
-  text-align: center;
   margin-top: 5%;
   flex-direction: column;
-  width: 80%;
   margin-left: 50px;
+  text-align: justify;
 }
 
 .left {
@@ -203,15 +206,12 @@ flex-direction: column;
   text-align: justify;
   line-height: 30px;
   padding: 20px;
-  margin-top: 0px;
+  margin-top: 0;
   justify-content: space-around;
 }
 
 
-.container {
-  display: flex;
-  text-align: justify;
-}
+
 
 .column-triple{
   display: flex;
@@ -287,6 +287,8 @@ footer{
     display: none;
   }
 
+  
+
 
   #main-title {
 
@@ -332,21 +334,16 @@ footer{
   }
     
 
-  .container {
-    flex-direction: row;
-    
-  }
-
   .left{
     display: flex;
     flex: 50%;
-    padding:0px 30px;
+    padding:0 30px;
   }
 
-   .bgimg {
+   .bg_img {
     background-color: white;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     border: 0;
     backface-visibility: hidden;
   } 
@@ -361,17 +358,18 @@ footer{
     text-align: justify;
     line-height: 50px;
     flex:50%;
-    padding:0px 30px;
+    padding:0 30px;
   }
   .container{
     display: flex;
     flex-direction: row;
-    padding: 0px 20px;  
-    justify-content: space-around;
+    padding: 0 0;
+    text-align: justify;
+   
   }
 
   h3 {
-    margin: 0px;
+    margin: 0;
   }
 
   #musDesc{
@@ -380,18 +378,18 @@ footer{
    flex-wrap: wrap;
    width:100%;
    justify-content: left;
-   
   }
 
   #musDesc > div{
     width:250px;
     margin: 20px;
+    justify-content: space-between;
   }
 
   .column-triple{
     padding: 10px;
     width: 100%;
-    
+    justify-content: space-between;
   }
 
   #faq ol li{
