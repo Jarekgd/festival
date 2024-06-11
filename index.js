@@ -8,11 +8,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const sqlite3 = require('sqlite3').verbose();
-const database = new sqlite3.Database('festival.db', (err) => {
+
+// Use path.join to ensure the correct path
+const dbPath = path.join(__dirname, 'public', 'data', 'festival.db');
+const database = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error("Error opening database:", err.message);
     } else {
-        console.log("Database opened successfully.");
+        console.log("Database opened successfully at", dbPath);
     }
 });
 
@@ -58,8 +61,13 @@ app.get('/festival.db', (req, res) => {
             console.error("Error executing SQL query:", err.message);
             res.status(500).json({ error: err.message });
         } else {
-            console.log("Query result:", rows);
-            res.json(rows);
+            if (rows.length === 0) {
+                console.log("No rows found.");
+                res.json({ message: "No data found." });
+            } else {
+                console.log("Query result:", rows);
+                res.json(rows);
+            }
         }
     });
 });
