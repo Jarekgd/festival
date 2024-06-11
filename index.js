@@ -1,25 +1,41 @@
-const express = require('express');
-const app = express();
-const cookie = require("cookie-parser");
-const PORT = process.env.PORT || 5000;
+const express = require("express");
+const app = express(); // Creating server
+const PORT = 5000;
+const path = require("path"); // path to ejs files
 
-app.set("View engine", "ejs");
-// Placement of static files:
-app.use(express.static("public"));
+const sql = require("sqlite3");
 
-// routs:
+app.use(express.static("src"));
+app.set("view engine", "ejs");
+// Placement of ejs files:
+app.set("views", path.join(__dirname, "views"));
+
+// Running root file default index.js
 app.get("/", (req, res) => {
-    res.render("index.ejs", { name: 'Home' })
-})
+    res.render("index");
+});
 
-app.get("/views/", (req, res) => {
-    res.render("lineup", { name: 'lineup' })
-})
+app.get("/musicians", (req, res) => {
+    res.render("musicians");
+});
 
-app.get("/views/", (req, res) => {
-    res.render("musicians", { name: 'musicians' })
-})
+app.get("/archive", (req, res) => {
+    res.render("archive");
+});
+
+app.get("/events", (req, res) => {
+    res.render("events");
+});
+
+app.get("/quizzes", (req, res) => {
+    res.render("quizzes");
+});
+
+app.get("/scenes", (req, res) => {
+    res.render("scenes");
+});
+
 
 app.listen(PORT, () => {
-    console.log(`Running on port ${PORT} `)
-})
+    console.log(`Server is running on port ${PORT} `);
+});

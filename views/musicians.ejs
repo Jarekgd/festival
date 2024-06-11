@@ -1,15 +1,49 @@
-<h2>Musicians</h2>
-<div class="container">
-  <div class="left">
-    <a href="musicians.html"
-      ><img src="./img/b4a.jpg" class="img_left" alt="image" title="musicians"
-    /></a>
-  </div>
-  <div class="right">
-    This year we have invited top musician representing different styles of jazz
-    music. We have diversity of styles: from traditional swing, bebop musician,
-    through ethnic influences on jazz music to contemporary, experimental
-    electronic music. Each day fans of jazz may find something interestin,
-    according to personal preferences.
-  </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/11edfe8d81.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="/#main"><img src="./img/logo.png" alt="logo" height="30px"></a>
+        </div>
+        <ul>
+            <li><a href="/#main">home</a></li>
+            <li><a href="/#program">program</a></li>
+            <li><a href="/#musicians">musicians</a></li>
+            <li><a href="/#scenes">scenes</a></li>
+            <li><a href="/#events">events</a></li>
+            <li><a href="/#quizzes">quizzes</a></li>
+            <li><a href="/#archive">archive</a></li>
+            <li><a href="/#contact">contact</a></li>
+            <li><a href="/#faq">faq</a></li>
+        </ul>
+        <div class="dropdown">
+            <div class="fas fa-bars" onclick="toggleDropdown()"></div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="/#main">home</a>
+                <a href="/#program">program</a>
+                <a href="/#musicians">musicians</a>
+                <a href="/#scenes">scenes</a>
+                <a href="/#events">events</a>
+                <a href="/#quizzes">quizzes</a>
+                <a href="/#archive">archive</a>
+                <a href="/#contact">contact</a>
+                <a href="/#faq">faq</a>
+            </div>
+        </div>
+    </nav>
+    <section class="triple">
+        <h2>Musicians</h2>
+        <div class="container">
+            <div id="musDesc"></div>
+        </div>
+    </section>
+    <script src="scripts/script1.js"></script>
+</body>
+</html>
