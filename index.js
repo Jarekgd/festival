@@ -1,5 +1,5 @@
 const express = require("express"); // Synchronous import
-const app = express(); // Creating server
+const app = express(); // Creating server, instance of express
 const PORT = 5000;
 const path = require("path"); // Path to EJS files
 
@@ -7,19 +7,18 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const sqlite3 = require('sqlite3').verbose();
-
-// Use path.join to ensure the correct path
 const dbPath = path.join(__dirname, 'public', 'data', 'festival.db');
-const database = new sqlite3.Database(dbPath, (err) => {
+
+const sqlite3 = require('sqlite3').verbose();
+const database = new sqlite3.Database('festival.db', (err) => {
     if (err) {
         console.error("Error opening database:", err.message);
     } else {
-        console.log("Database opened successfully at", dbPath);
+        console.log("Database opened successfully.");
     }
 });
 
-app.set("view engine", "ejs");
+app.set("view engine", "ejs");  
 // Placement of EJS files:
 app.set("views", path.join(__dirname, "views"));
 
@@ -61,13 +60,8 @@ app.get('/festival.db', (req, res) => {
             console.error("Error executing SQL query:", err.message);
             res.status(500).json({ error: err.message });
         } else {
-            if (rows.length === 0) {
-                console.log("No rows found.");
-                res.json({ message: "No data found." });
-            } else {
-                console.log("Query result:", rows);
-                res.json(rows);
-            }
+            console.log("Query result:", rows);
+            res.json(rows);
         }
     });
 });
