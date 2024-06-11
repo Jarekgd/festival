@@ -65,16 +65,16 @@ function faq6() {
 }
 
 
-// AJAX JSON lineup
-document.getElementById("lineup").addEventListener = ("load", loadMusicians);
+// AJAX JSON linep
+document.getElementById("lineup").addListener = ("load", loadMusicians());
 function loadMusicians() {
   let xhr = new XMLHttpRequest();
   xhr.open("GET", "./data/lineup.json", true);
   xhr.onload = function () {
-    if (this.status === 200) {
+    if (this.status == 200) {
       let musicians = JSON.parse(this.responseText);
       let output = "";
-      for (let i in musicians) {
+      for (var i in musicians) {
         output += "<ul>" + "<li>" + musicians[i].name + "</li>" + "</ul>";
         document.getElementById("lineup").innerHTML = output;
       }
