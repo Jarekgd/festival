@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Lineup</h2>
+    <h2>Program</h2>
 <ul>
   <% artists.forEach(artist => { %>
-    <><%= artist.artist_name %> - <%= artist.performance_date %></li>
+    <%= artist.artist_name %><br><%= artist.performance_time %><br></li>
   <% }); %>
 </ul>
 </body>

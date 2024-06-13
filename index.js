@@ -23,7 +23,10 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 app.get("/", (req, res) => {
-  const lineup_query = "SELECT artist_name FROM artists";
+  const lineup_query = "SELECT artist_name, performance_time \
+    FROM artists \
+    INNER JOIN performances ON artists.artist_id=performances.artist_id \
+    WHERE performance_date LIKE '%2024%'";
   db.all(lineup_query, [], (err, rows) => {
     if (err) {
       console.error("Error querying database: ", err.message);
@@ -36,8 +39,11 @@ app.get("/", (req, res) => {
 
 app.get("/musicians", (req, res) => {
   const musicians_query =
-    "SELECT artist_name, genre_name FROM artists \
-                          INNER JOIN genres ON artists.genre_id = genres.genre_id";
+    "SELECT artist_name, genre_name, artist_picture, artist_description \
+    FROM artists \
+    INNER JOIN genres ON artists.genre_id = genres.genre_id \
+    INNER JOIN performances ON artists.artist_id=performances.artist_id \
+    WHERE performance_date LIKE '%2024%'";
   db.all(musicians_query, [], (err, rows) => {
     if (err) {
       console.error("Error querying musicians data:", err.message);
@@ -67,11 +73,10 @@ app.get('/archive', (req, res) => {
     return;
   }
 
-  const archiveQuery = `
-    SELECT artist_name, performance_date
-    FROM artists
-    INNER JOIN performances ON artists.artist_id = performances.artist_id
-    WHERE strftime('%Y', performance_date) = ?`;
+  const archiveQuery = "SELECT artist_name, performance_date \
+    FROM artists \
+    INNER JOIN performances ON artists.artist_id = performances.artist_id \
+    WHERE strftime('%Y', performance_date) = ?";
 
   db.all(archiveQuery, [year], (err, rows) => {
     if (err) {

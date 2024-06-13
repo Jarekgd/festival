@@ -17,7 +17,8 @@
             <tbody>
                 <% artists.forEach(artist=> { %>
                     <tr>
-                        <td><%= artist.artist_name %><br></td>
+                        <td><%= artist.artist_name %><br><img src="/<%= artist.artist_picture %>" alt="<%= artist.artist_name %>" width="100"><br>
+                            <%= artist.artist_name %><br><%= artist.genre_name %><br><%= artist.artist_description %><br></td>
                     </tr>
                     <% }); %>
             </tbody>
