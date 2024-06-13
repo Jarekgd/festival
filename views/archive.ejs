@@ -43,13 +43,28 @@
     <section class="triple">
         <h2>Archive</h2>
         <div class="container">
-            <tbody>
-                <% artists.forEach(artist=> { %>
-                    <tr>
-                        <td><%= artist.artist_name %><br></td>
-                    </tr>
-                    <% }); %>
-            </tbody>
+            
+            <form action="/archive" method="GET">
+                <label for="year">Choose a year:</label>
+                <select name="year" id="year">
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                </select>
+                <button type="submit">Show Artists</button>
+              </form>
+            
+              <% if (artists && artists.length > 0) { %>
+                <h2>Artists who performed in <%= year %>:</h2>
+                <ul>
+                  <% artists.forEach(artist => { %>
+                    <li><%= artist.artist_name %> (Performance Date: <%= artist.performance_date %>)</li>
+                  <% }); %>
+                </ul>
+              <% } else if (artists) { %>
+                <p>No artists found for the selected year.</p>
+              <% } %>
         </div>
     </section>
     <script src="scripts/script.js"></script>

@@ -48,27 +48,6 @@ app.get("/musicians", (req, res) => {
   });
 });
 
-app.get("/archive", (req, res) => {
-  const years = {
-
-  }
-  const archive_query =
-              "SELECT artist_name, genre_name, performance_date \
-              FROM artists \
-              INNER JOIN genres ON artists.genre_id = genres.genre_id \
-              INNER JOIN performances ON artists.artist_id = performances.artist_id \
-              WHERE strftime('%Y', performances.performance_date) LIKE ?;"
-
-  db.all(archive_query, [], (err, rows) => {
-    if (err) {
-      console.error("Error querying musicians data:", err.message);
-      res.status(500).send("Database error");
-      return;
-    }
-    res.render("archive", {artists: rows});
-  });
-});
-
 app.get("/events", (req, res) => {
   res.render("events");
 });
@@ -81,20 +60,32 @@ app.get("/scenes", (req, res) => {
   res.render("scenes");
 });
 
+app.get('/archive', (req, res) => {
+  const year = req.query.year;
+  if (!year) {
+    res.render('archive', { artists: null, year: null });
+    return;
+  }
 
-app.get("/contact", (req,res) => {
-  res.render("contact");
+  const archiveQuery = `
+    SELECT artist_name, performance_date
+    FROM artists
+    INNER JOIN performances ON artists.artist_id = performances.artist_id
+    WHERE strftime('%Y', performance_date) = ?`;
+
+  db.all(archiveQuery, [year], (err, rows) => {
+    if (err) {
+      console.error('Error querying archive data:', err.message);
+      res.status(500).send('Database error');
+      return;
+    }
+
+    res.render('archive', { artists: rows, year: year });
+  });
 });
-
-app.get("/footer", (req, res) => {
-res.render("footer");
-});
-
-
 
 // Serving static files
 app.use(express.static(path.join(__dirname, "public")));
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
