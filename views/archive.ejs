@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/11edfe8d81.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <nav>
         <div class="logo">
@@ -41,41 +43,16 @@
     <section class="triple">
         <h2>Archive</h2>
         <div class="container">
-            <div class="column-triple">
-                <div>
-                    <h3>2023</h3>
-                    <img src="./img/y1.jpg" class="img_left" alt="image">
-                </div>
-                <div>
-                    I bet you still sing hits from the last year festival. Look again who was our guest.
-                </div>
-            </div>
-            <div class="column-triple">
-                <div>
-                    <h3>2022</h3>
-                    <img src="./img/y2.jpg" class="img_left" alt="image">
-                </div>
-                <div>
-                    Fantastic year for music. One of the best festival we have ever organised. 
-                </div>
-            </div>
-            <div class="column-triple">
-                <div>
-                    <h3>2021</h3>
-                    <img src="./img/y3.jpg" class="img_left" alt="image">
-                </div>
-                <div>
-                    Unforgettable 2021 when we all started to feel release after COVID pandemic was explosion of new talents.
-                </div>
-            </div>
+            <tbody>
+                <% artists.forEach(artist=> { %>
+                    <tr>
+                        <td><%= artist.artist_name %><br></td>
+                    </tr>
+                    <% }); %>
+            </tbody>
         </div>
     </section>
-   
-
-
-
-
-
     <script src="scripts/script.js"></script>
 </body>
+
 </html>

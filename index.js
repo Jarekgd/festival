@@ -3,69 +3,98 @@ const app = express(); // Creating server, instance of express
 const PORT = 5000;
 const path = require("path"); // Path to EJS files
 
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const dbPath = path.join(__dirname, 'public', 'data', 'festival.db');
+const dbPath = path.join(__dirname, "public", "data", "festival.db");
 
-const sqlite3 = require('sqlite3').verbose();
-const database = new sqlite3.Database('festival.db', (err) => {
-    if (err) {
-        console.error("Error opening database:", err.message);
-    } else {
-        console.log("Database opened successfully.");
-    }
+const sqlite3 = require("sqlite3").verbose();
+const db = new sqlite3.Database("festival.db", (err) => {
+  if (err) {
+    console.error("Error opening database:", err.message);
+  } else {
+    console.log("Database opened successfully.");
+  }
 });
 
-app.set("view engine", "ejs");  
+app.set("view engine", "ejs");
 // Placement of EJS files:
 app.set("views", path.join(__dirname, "views"));
 
-// Running root file default index.js
 app.get("/", (req, res) => {
-    res.render("index");
+  const lineup_query = "SELECT artist_name FROM artists";
+  db.all(lineup_query, [], (err, rows) => {
+    if (err) {
+      console.error("Error querying database: ", err.message);
+      res.status(500).send("Database error");
+      return;
+    }
+    res.render("index", { artists: rows });
+  });
 });
 
 app.get("/musicians", (req, res) => {
-    res.render("musicians");
+  const musicians_query =
+    "SELECT artist_name, genre_name FROM artists \
+                          INNER JOIN genres ON artists.genre_id = genres.genre_id";
+  db.all(musicians_query, [], (err, rows) => {
+    if (err) {
+      console.error("Error querying musicians data:", err.message);
+      res.status(500).send("Database error");
+      return;
+    }
+    res.render("musicians", { artists: rows });
+  });
 });
 
 app.get("/archive", (req, res) => {
-    res.render("archive");
+  const years = {
+
+  }
+  const archive_query =
+              "SELECT artist_name, genre_name, performance_date \
+              FROM artists \
+              INNER JOIN genres ON artists.genre_id = genres.genre_id \
+              INNER JOIN performances ON artists.artist_id = performances.artist_id \
+              WHERE strftime('%Y', performances.performance_date) LIKE ?;"
+
+  db.all(archive_query, [], (err, rows) => {
+    if (err) {
+      console.error("Error querying musicians data:", err.message);
+      res.status(500).send("Database error");
+      return;
+    }
+    res.render("archive", {artists: rows});
+  });
 });
 
 app.get("/events", (req, res) => {
-    res.render("events");
+  res.render("events");
 });
 
 app.get("/quizzes", (req, res) => {
-    res.render("quizzes");
+  res.render("quizzes");
 });
 
 app.get("/scenes", (req, res) => {
-    res.render("scenes");
+  res.render("scenes");
 });
+
+
+app.get("/contact", (req,res) => {
+  res.render("contact");
+});
+
+app.get("/footer", (req, res) => {
+res.render("footer");
+});
+
+
 
 // Serving static files
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Endpoint to get data from the database
-app.get('/festival.db', (req, res) => {
-    const query = 'SELECT * FROM musicians;';
-    console.log("Executing query:", query);
-
-    database.all(query, (err, rows) => {
-        if (err) {
-            console.error("Error executing SQL query:", err.message);
-            res.status(500).json({ error: err.message });
-        } else {
-            console.log("Query result:", rows);
-            res.json(rows);
-        }
-    });
-});
+app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
