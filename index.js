@@ -4,9 +4,9 @@ const PORT = 5000;
 const path = require("path"); // Path to EJS files
 
 // middleware
-const bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+const bodyparser = require("body-parser");
+app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.json());
 
 const dbPath = path.join(__dirname, "public", "data", "festival.db");
 
@@ -20,13 +20,13 @@ const db = new sqlite3.Database("festival.db", (err) => {
   }
 });
 
-const contacts = new sqlite3.Database("contacts.db", (err) => {
-  if (err) {
-    console.error("Error opening database:", err.message);
-  } else {
-    console.log("Contacts opened successfully.");
-  }
-});
+// const contacts = new sqlite3.Database("contacts.db", (err) => {
+//   if (err) {
+//     console.error("Error opening database:", err.message);
+//   } else {
+//     console.log("Contacts opened successfully.");
+//   }
+// });
 
 app.set("view engine", "ejs");
 // Placement of EJS files:
@@ -72,14 +72,14 @@ app.get("/musicians", (req, res) => {
   });
 });
 
-contacts.serialize(() => {
-  contacts.run(`CREATE TABLE IF NOT EXISTS contacts(
-    contact_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    contact_name TEXT,
-    contact_email TEXT,
-    message TEXT
-  )`);
-});
+// contacts.serialize(() => {
+//   contacts.run(`CREATE TABLE IF NOT EXISTS contacts(
+//     contact_id INTEGER PRIMARY KEY AUTOINCREMENT,
+//     contact_name TEXT,
+//     contact_email TEXT,
+//     message TEXT
+//   )`);
+// });
 
 app.get("/events", (req, res) => {
   res.render("events");
@@ -116,9 +116,24 @@ app.get('/archive', (req, res) => {
   });
 });
 
-app.get('contact', (req, res) => {
+app.get('/contact', (req, res) => {
   res.render('contact');
 })
+
+app.post('/save_contact', (req, res) =>{
+  const contact_query = 'INSERT INTO contacts (contact_name, contact_email, subject, message) \
+                     VALUES (?, ?, ?, ?);'
+  db.run(contact_query, Object.values(req.body), (err) =>{ // Object.values(req.body) makes array object
+    if (err)
+    {
+      res.render('confirmation', {response: "Database error"})
+    }
+    else{
+      res.render('confirmation', {response: "Message sent succesfully."})
+    }
+  }) 
+});
+
 
 app.get('/cookie_banner', (req, res) => {
   res.render('cookie_banner');
