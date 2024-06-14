@@ -66,7 +66,6 @@ function faq6() {
     "My favourite color is rgb(75,12,68)";
 }
 
-
 // AJAX JSON linep
 document.getElementById("lineup").addListener = ("load", loadMusicians());
 function loadMusicians() {
@@ -88,25 +87,4 @@ function loadMusicians() {
   xhr.send();
 }
 
-// AJAX JSON musicians description
-// document.getElementById("musDesc").addListener = ("load", loadMusiciansDescriptions());
-// function loadMusiciansDescriptions() {
-//   let xhr1 = new XMLHttpRequest();
-//   xhr1.open("GET", "./data/lineup.json", true);
-//   xhr1.onload = function () {
-//     if (this.status == 200) {
-//       let musician = JSON.parse(this.responseText);
-//       let output1 = "";
-//       for (var i in musician) {
-//         output1 += "<ul>" + "<li>" + musician[i].name + "</li>" + "</ul>";
-//         document.getElementById("musDesc").innerHTML = output1;
-//       }
-//     }
-//   };
-//   xhr1.onerror = function () {
-//     console.log("Request error...");
-//   };
-//   xhr.send();
-// }
 
-// form validation

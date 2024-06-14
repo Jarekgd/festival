@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +10,12 @@
     <script src="https://kit.fontawesome.com/11edfe8d81.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Navigatin bar -->
     <nav>
         <div class="logo">
             <a href="#main"><img src="./img/logo.png" alt="logo" height="30"></a>
         </div>
+        <!-- links to sections in menu -->
         <ul>
             <li><a href="#main">home</a></li>
             <li><a href="#program">program</a></li>
@@ -26,6 +27,7 @@
             <li><a href="#contact">contact</a></li>
             <li><a href="#faq">faq</a></li>
         </ul>
+        <!-- link to sections in dropdown menu -->
         <div class="dropdown">
             <div class="fas fa-bars" onclick="toggleDropdown()"></div>
             <div id="myDropdown" class="dropdown-content">
@@ -41,34 +43,32 @@
             </div>
         </div>
     </nav>
+    <!-- Home page section -->
     <section id="main">
         <div id="main-title">
             <h1>Contemporary Jazz Festival</h1>
         </div>
         <div id="main-date">20.06.2024</div>
-        <div id="countdown"></div>        
+        <div id="countdown"></div>
+        <div id="cookie-banner">
+            <h4>Warning!</h4>
+            <p>This page uses cookies.</p>
+            <button id="closeCookieButton" title="cookiesButton">X</button>
+        </div>
     </section>
-    <div id="cookie-banner">
-        <h4>Warning!</h4>
-        <p>This page uses cookies.</p>
-        <button id="closeCookieButton" title="cookiesButton">X</button>
-    </div>
+    <!-- Section program / lineup -->
     <section id="program">
         <h2>Program</h2>
         <hr>
-        <!-- <div id="lineup"></div>        -->
-         <table>
-            <thead><tr>artist</tr></thead>
-            <tbody><tr></tr></tbody>
-         </table>
+        <div id="lineup"></div>
+        
     </section>
+    <!-- Section musicians -->
     <section id="musicians">
         <h2>Musicians</h2>
         <div class="container">
             <div class="left">
-                
                 <a href="musicians.html"><img src="img/b4a.jpg" class="img_left" alt="image" title="musicians"></a>
-            
             </div>
             <div class="right">
                 This year we have invited top musician representing different styles of jazz music.
@@ -77,14 +77,15 @@
                 Each day fans of jazz may find something interesting, according to personal preferences.
             </div>
         </div>
-    </section>  
+    </section>
+    <!-- Section scenes -->
     <section id="scenes">
         <h2>Scenes</h2>
         <div class="container">
             <div class="left">
                 <div class="bg_img">
-                <a href="scenes.html"><img src="img/b6a.jpg" class="img_left" alt="image" title="scenes"></a>
-            </div>
+                    <a href="scenes.html"><img src="img/b6a.jpg" class="img_left" alt="image" title="scenes"></a>
+                </div>
             </div>
             <div class="right">
                 Our artists will give performances on three stages.
@@ -94,13 +95,16 @@
             </div>
         </div>
     </section>
+    <!-- Section events -->
     <section id="events">
-        <div><h2>Other events</h2></div>
+        <div>
+            <h2>Other events</h2>
+        </div>
         <div class="container">
             <div class="left">
                 <div class="bg_img">
-                <a href="events.html"><img src="img/b9a.jpg" class="img_left" alt="image" title="events"></a>
-            </div>
+                    <a href="events.html"><img src="img/b9a.jpg" class="img_left" alt="image" title="events"></a>
+                </div>
             </div>
             <div class="right">
                 There are additional events in the city like films projections - all about jazz music, discussions and
@@ -109,12 +113,13 @@
             </div>
         </div>
     </section>
+    <!-- Section quizzes -->
     <section id="quizzes">
         <h2>Quizzes</h2>
         <div class="container">
             <div class="left">
                 <div class="bg_img">
-                <a href="quizzes.html"><img src="img/q1a.jpg" class="img_left" alt="image"  title="quizzes"></a>
+                    <a href="quizzes.html"><img src="img/q1a.jpg" class="img_left" alt="image" title="quizzes"></a>
                 </div>
             </div>
             <div class="right">
@@ -122,6 +127,7 @@
             </div>
         </div>
     </section>
+    <!-- Section archive -->
     <section id="archive">
         <h2>Archive festivals</h2>
         <div class="container">
@@ -133,7 +139,8 @@
                 Check our previous editions and artists performing in every year.
             </div>
         </div>
-    </section>   
+    </section>
+    <!-- Section contact -->
     <section id="contact">
         <h2>Contact</h2>
         <div class="container">
@@ -147,7 +154,6 @@
                     <input type="text" id="subject" name="subject"><br>
                     <label for="message">Message:</label><br>
                     <textarea name="message" rows="6" title="message" id="message"></textarea><br>
-
                     <input type="button" value="Send">
                 </form>
             </div>
@@ -156,6 +162,7 @@
             </div>
         </div>
     </section>
+    <!-- Section faq -->
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <div class="container">
@@ -172,21 +179,22 @@
             <div class="right">
                 <p id="answer">Click on question.</p>
             </div>
-            </div>
+        </div>
     </section>
     <hr>
+    <!-- Footer -->
     <footer>
         <div class="left">
             <p>Copyright &copy; Glod &amp; Jaro Entertainment.<br>All rights reserved.</p>
         </div>
         <div class="right">
-            <a href="#" target="_blank" title="Facebook"><img src="./src/img/face.png" class="logos" alt="logo" ></a>
-            <a href="#" target="_blank" title="Twitter"><img src="./src/img/twit.png" class="logos" alt="logo" ></a>
-            <a href="#" target="_blank" title="Youtube"><img src="./src/img/you.png" class="logos" alt="logo" ></a>
-            <a href="#" target="_blank" title="Instagram"><img src="./src/img/inst.png" class="logos" alt="logo" ></a>
-            <a href="#" target="_blank" title="TicToc"><img src="./src/img/tic.png" class="logos" alt="logo" ></a>
+            <a href="#" target="_blank" title="Facebook"><img src="./src/img/face.png" class="logos" alt="logo"></a>
+            <a href="#" target="_blank" title="Twitter"><img src="./src/img/twit.png" class="logos" alt="logo"></a>
+            <a href="#" target="_blank" title="Youtube"><img src="./src/img/you.png" class="logos" alt="logo"></a>
+            <a href="#" target="_blank" title="Instagram"><img src="./src/img/inst.png" class="logos" alt="logo"></a>
+            <a href="#" target="_blank" title="TicToc"><img src="./src/img/tic.png" class="logos" alt="logo"></a>
         </div>
-    </footer> 
-    <script src="script.js"></script>
+    </footer>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
