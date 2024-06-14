@@ -47,6 +47,10 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/nav", (req, res) => {
+  res.render("nav");
+});
+
 app.get("/musicians", (req, res) => {
   const musicians_query =
     "SELECT artist_name, genre_name, artist_picture, artist_description \
@@ -106,6 +110,10 @@ app.get('/archive', (req, res) => {
 
     res.render('archive', { artists: rows, year: year });
   });
+});
+
+app.get('/cookie_banner', (req, res) => {
+  res.render('cookie_banner');
 });
 
 // Serving static files

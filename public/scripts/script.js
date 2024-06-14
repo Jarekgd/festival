@@ -15,8 +15,10 @@ if (days > 1) {
 }
 
 // cookie banner
-document.getElementById("closeCookieButton").addEventListener("click", () => {
-  document.getElementById("cookie-banner").style.display = "none";
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("closeCookieButton").addEventListener("click", () => {
+      document.getElementById("cookie-banner").style.display = "none";
+  });
 });
 
 // toggle menu drop down list
