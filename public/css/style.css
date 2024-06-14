@@ -286,10 +286,7 @@
       visibility: hidden;
       display: none;
     }
-  
-    
-  
-  
+
     #main-title {
   
       top: 8%;
@@ -333,7 +330,7 @@
       padding: 20px;
     }
       
-  
+
     .left{
       display: flex;
       flex: 50%;
@@ -399,6 +396,13 @@
     #faq .right{
       color: rgb(246, 191, 124);
      background-color: rgb(5, 5, 5);
+    }
+
+    input[type=text], select, textarea{
+      width: 100%;
+      box-sizing: border-box;
+      resize: vertical;
+      padding: 10px;
     }
   
     footer{

@@ -3,6 +3,7 @@ const app = express(); // Creating server, instance of express
 const PORT = 5000;
 const path = require("path"); // Path to EJS files
 
+// middleware
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -10,11 +11,20 @@ app.use(bodyParser.json());
 const dbPath = path.join(__dirname, "public", "data", "festival.db");
 
 const sqlite3 = require("sqlite3").verbose();
+
 const db = new sqlite3.Database("festival.db", (err) => {
   if (err) {
     console.error("Error opening database:", err.message);
   } else {
     console.log("Database opened successfully.");
+  }
+});
+
+const contacts = new sqlite3.Database("contacts.db", (err) => {
+  if (err) {
+    console.error("Error opening database:", err.message);
+  } else {
+    console.log("Contacts opened successfully.");
   }
 });
 
@@ -52,6 +62,15 @@ app.get("/musicians", (req, res) => {
     }
     res.render("musicians", { artists: rows });
   });
+});
+
+contacts.serialize(() => {
+  contacts.run(`CREATE TABLE IF NOT EXISTS contacts(
+    contact_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    contact_name TEXT,
+    contact_email TEXT,
+    message TEXT
+  )`);
 });
 
 app.get("/events", (req, res) => {
