@@ -51,6 +51,10 @@ app.get("/nav", (req, res) => {
   res.render("nav");
 });
 
+app.get("/nav_other", (req, res) => {
+  res.render("nav_other");
+});
+
 app.get("/musicians", (req, res) => {
   const musicians_query =
     "SELECT artist_name, genre_name, artist_picture, artist_description \
@@ -111,6 +115,10 @@ app.get('/archive', (req, res) => {
     res.render('archive', { artists: rows, year: year });
   });
 });
+
+app.get('contact', (req, res) => {
+  res.render('contact');
+})
 
 app.get('/cookie_banner', (req, res) => {
   res.render('cookie_banner');
