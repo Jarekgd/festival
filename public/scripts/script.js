@@ -14,13 +14,6 @@ if (days > 1) {
   document.getElementById("countdown").innerHTML = "Festival begins today!";
 }
 
-// cookie banner
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("closeCookieButton").addEventListener("click", () => {
-      document.getElementById("cookie-banner").style.display = "none";
-  });
-});
-
 // toggle menu drop down list
 function toggleDropdown() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -39,6 +32,52 @@ window.onclick = function (event) {
     }
   }
 };
+
+// cookie banner
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("closeCookieButton").addEventListener("click", () => {
+      document.getElementById("cookie-banner").style.display = "none";
+  });
+});
+
+// AJAX JSON linep
+document.addEventListener("DOMContentLoaded", loadMusicians);
+function loadMusicians() {
+  let xhr = new XMLHttpRequest();
+  xhr.open("GET", "data/lineup.json", true);
+  xhr.onload = function () {
+    if (this.status == 200) {
+      let musicians = JSON.parse(this.responseText);
+      musicians.sort((a, b) => a.time.localeCompare(b.time));
+
+      let artistMain = "";
+      let artistSmall = "";
+      let artistAlt = "";
+
+      for (let musician of musicians) {
+        let musicianShow = "<ul><li>" + musician.name + "<br>" + musician.time + "</li></ul>";
+        if (musician.scene === "main"){
+          artistMain += musicianShow;
+        }
+        else if (musician.scene === "small") {
+          artistSmall += musicianShow;
+        }
+        else if(musician.scene === "Alternative") {
+          artistAlt += "musicianShow"
+        }
+      }
+      document.getElementById("scene_main").innerHTML += artistMain;
+      document.getElementById("scene_small").innerHTML += artistSmall;
+      document.getElementById("scene_alt").innerHTML += artistAlt;
+    }
+  };
+
+  xhr.onerror = function () {
+    console.log("Request error...");
+  };
+  xhr.send();
+}
+
 
 // faq section display text on menu click
 function faq1() {
@@ -66,25 +105,5 @@ function faq6() {
     "My favourite color is rgb(75,12,68)";
 }
 
-// AJAX JSON linep
-document.getElementById("lineup").addListener = ("load", loadMusicians());
-function loadMusicians() {
-  let xhr = new XMLHttpRequest();
-  xhr.open("GET", "data/lineup.json", true);
-  xhr.onload = function () {
-    if (this.status == 200) {
-      let musicians = JSON.parse(this.responseText);
-      let output = "";
-      for (var i in musicians) {
-        output += "<ul>" + "<li>" + musicians[i].name + "</li>" + "</ul>";
-        document.getElementById("lineup").innerHTML = output;
-      }
-    }
-  };
-  xhr.onerror = function () {
-    console.log("Request error...");
-  };
-  xhr.send();
-}
 
 

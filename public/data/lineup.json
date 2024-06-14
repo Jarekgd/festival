@@ -4,188 +4,242 @@
             "scene": "main",
             "genre": "bebop",
 			"image": "./img/ega.jpg",
-			"description":"Everybody knows the name B.B. Grant (Boogie Ben Grant). his last CD 'Emty City Moods' was huge succes. Great trumpet player one more time proved his talent. He will present his most popular songs."
+			"description":"Everybody knows the name B.B. Grant (Boogie Ben Grant). his last CD 'Emty City Moods' was huge succes. Great trumpet player one more time proved his talent. He will present his most popular songs.",
+            "date": "2024-06-20",
+            "time": "14:00"
         },
         {
             "name": "Elvira Marocco",
             "scene": "small",
             "genre": "ethnic jazz",
             "image": "./img/b2a.jpg",
-            "description": "Elvira Marocco - diva of soul and funk music. Her angel voice will touch your heart 'to the bone'. Romantic and dynamic at the same time, fun and sadness, one word - Elvira!"
+            "description": "Elvira Marocco - diva of soul and funk music. Her angel voice will touch your heart 'to the bone'. Romantic and dynamic at the same time, fun and sadness, one word - Elvira!",
+            "date": "2024-06-20",
+            "time": "14:00"
         },
         {
             "name": "Edun Jazz Band",
             "scene": "alternative",
             "genre": "bebop",
             "image": "./img/ejba.jpg",
-            "description": "Edun Jazz Band - unforgetable 'Dooby Doo Daa' was sang by every schoorgirl in your collage. Those fantastic guys produce vulcano of sound."
+            "description": "Edun Jazz Band - unforgetable 'Dooby Doo Daa' was sang by every schoorgirl in your collage. Those fantastic guys produce vulcano of sound.",
+            "date": "2024-06-20",
+            "time": "14:00"
         },
         {
             "name": "DJ Eskimo",
             "scene": "main",
             "genre": "electro jazz",
             "image": "./img/eskimo.jpg",
-            "description": "One of the best perfofmers from Grenlandia comes to visit hot Liverpool this year. Get electric shock listening to his fantastic, original songs."
+            "description": "One of the best perfofmers from Grenlandia comes to visit hot Liverpool this year. Get electric shock listening to his fantastic, original songs.",
+            "date": "2024-06-20",
+            "time": "15:00"
         },
         {
             "name": "Ramzes & The Hooligans",
             "scene": "main",
             "genre": "swing",
             "image": "./img/ramzes.jpg",
-            "description": "They are unstopable, they revolutionery, they are wild. Full energy of sound will make every girl fall in love."
+            "description": "They are unstopable, they revolutionery, they are wild. Full energy of sound will make every girl fall in love.",
+            "date": "2024-06-20",
+            "time": "16:00"
         },
         {
             "name": "Brasiliera Diri-Donga",
             "scene": "main",
             "genre": "latin jazz",
             "image": "./img/diri.jpg",
-            "description": "The girs from Diri-Donga will set fire in your ears. Lationo rythms with angel voices."
+            "description": "The girs from Diri-Donga will set fire in your ears. Lationo rythms with angel voices.",
+            "date": "2024-06-20",
+            "time": "17:00"
         },
         {
             "name": "Fred Pauter Jr",
             "scene": "main",
             "genre": "bebop",
             "image": "./img/junior.jpg",
-            "description": "Like father like son. Fred Peter was famous composer, and now his son is singning his songs."
+            "description": "Like father like son. Fred Peter was famous composer, and now his son is singning his songs.",
+            "date": "2024-06-20",
+            "time": "18:00"
         },
         {
             "name": "Manchester Groove Five",
             "scene": "main",
             "genre": "funk jazz",
             "image": "./img/b3a.jpg",
-            "description": "Great band from Manchester. A lot of funk, a lot of fun."
+            "description": "Great band from Manchester. A lot of funk, a lot of fun.",
+            "date": "2024-06-20",
+            "time": "19:00"
         },
         {
             "name": "Free Kaka Orchestra",
             "scene": "main",
             "genre": "ethnic jazz",
             "image": "./img/kaka.jpg",
-            "description": "Jazz orchestra from South Africa playing jazz with local ethnic elements."
+            "description": "Jazz orchestra from South Africa playing jazz with local ethnic elements.",
+            "date": "2024-06-20",
+            "time": "20:00"
         },
         {
             "name": "Debby Burak Quintet",
             "scene": "main",
             "genre": "bebop",
             "image": "./img/derby.jpg",
-            "description": "Fantastic jazz band with Derby Burak on saxophone. One of the best contemporary jazz bands."
+            "description": "Fantastic jazz band with Derby Burak on saxophone. One of the best contemporary jazz bands.",
+            "date": "2024-06-20",
+            "time": "21:00"
         },
         {
             "name": "The Kobitas",
             "scene": "main",
             "genre": "smooth jazz",
             "image": "./img/choir.jpg",
-            "description": "Nostalgic smooth jazz sang by beautiful ladies from the Kobitas. Modern approach to jazz."
+            "description": "Nostalgic smooth jazz sang by beautiful ladies from the Kobitas. Modern approach to jazz.",
+            "date": "2024-06-20",
+            "time": "22:00"
         },
         {
             "name": "Krzysztof Pietrucha",
             "scene": "small",
             "genre": "swing",
             "image": "./img/pietrucha.jpg",
-            "description": "Phenomenal Polish musician, saxophone virtuoso will present his skills for our public."
+            "description": "Phenomenal Polish musician, saxophone virtuoso will present his skills for our public.",
+            "date": "2024-06-20",
+            "time": "15:00"
         },
         {
             "name": "Solent Blues Band",
             "scene": "small",
             "genre": "swing",
             "image": "./img/solent.jpg",
-            "description": "Their jazzy blues is one of the kind. This four lads now how to play and keep listeners concentrated."
+            "description": "Their jazzy blues is one of the kind. This four lads now how to play and keep listeners concentrated.",
+            "date": "2024-06-20",
+            "time": "16:00"
         },
         {
             "name": "Roberto Muchios Gracias",
             "scene": "small",
             "genre": "latin jazz",
             "image": "./img/roberto.jpg",
-            "description": "Another latin trumpet jazz player. Very shy. We appreciate your music Roberto. Mucios gracias Roberto."
+            "description": "Another latin trumpet jazz player. Very shy. We appreciate your music Roberto. Mucios gracias Roberto.",
+            "date": "2024-06-20",
+            "time": "17:00"
         },
         {
             "name": "Gypsy Electro Jazz",
             "scene": "small",
             "genre": "electro jazz",
             "image": "./img/gypsy.jpg",
-            "description": "Modern electro jazz in the best version. Perfect for listening and dancing."
+            "description": "Modern electro jazz in the best version. Perfect for listening and dancing.",
+            "date": "2024-06-20",
+            "time": "18:00"
         },
         {
             "name": "P.G.R. Quartet",
             "scene": "small",
             "genre": "swing",
             "image": "./img/hwdp.jpg",
-            "description": "Traditional swing, best of all. Standartds and new compositions."
+            "description": "Traditional swing, best of all. Standartds and new compositions.",
+            "date": "2024-06-20",
+            "time": "19:00"
         },
         {
             "name": "Easy Swing Band",
             "scene": "small",
             "genre": "swing",
             "image": "./img/easy.jpg",
-            "description": "Swing from the roots. It is not so easy, those guys know how to play and entertain listeners."
+            "description": "Swing from the roots. It is not so easy, those guys know how to play and entertain listeners.",
+            "date": "2024-06-20",
+            "time": "20:00"
         },
         {
             "name": "Ubu Fobidi Cama",
             "scene": "small",
             "genre": "ethnic jazz",
             "image": "./img/ubu.jpg",
-            "description": "Ethnic music from Uganda. Hot rythms with jazz feeling. A lot of inspirations from different genres."
+            "description": "Ethnic music from Uganda. Hot rythms with jazz feeling. A lot of inspirations from different genres.",
+            "date": "2024-06-20",
+            "time": "21:00"
         },
         {
             "name": "FC Nachel Green",
             "scene": "small",
             "genre": "funk jazz",
             "image": "./img/fc.jpg",
-            "description": "Funk is still popular and here is another funk jazz band. They are famous, belive me."
+            "description": "Funk is still popular and here is another funk jazz band. They are famous, belive me.",
+            "date": "2024-06-20",
+            "time": "22:00"
         },
         {
             "name": "Julian McClattney",
             "scene": "alternative",
             "genre": "smooth jazz",
             "image": "./img/McClattney.jpg",
-            "description": "Moody jazz played by saxophonist McClattney is so smooth, so intensive. Everybody gonna cry."
+            "description": "Moody jazz played by saxophonist McClattney is so smooth, so intensive. Everybody gonna cry.",
+            "date": "2024-06-20",
+            "time": "15:00"
         },
         {
             "name": "The Mustaches",
             "scene": "alternative",
             "genre": "funk jazz",
             "image": "./img/mustaches.jpg",
-            "description": "Get funky with this music. Taking all the best from 70's feel the disco groove with jazzy version of funk."
+            "description": "Get funky with this music. Taking all the best from 70's feel the disco groove with jazzy version of funk.",
+            "date": "2024-06-20",
+            "time": "16:00"
         },
         {
             "name": "Hindi Hara Kira",
             "scene": "alternative",
             "genre": "ethnic jazz",
             "image": "./img/hara.jpg",
-            "description": "Briliant fusion of traditional jazz with traditional folk harmony. You have never heard that kind of music before."
+            "description": "Briliant fusion of traditional jazz with traditional folk harmony. You have never heard that kind of music before.",
+            "date": "2024-06-20",
+            "time": "17:00"
         },
         {
             "name": "Emilia Mossina",
             "scene": "alternative",
             "genre": "smooth jazz",
             "image": "./img/emilia.jpg",
-            "description": "Emilia Johanni is a singer with silk smooth voice, singing old facioned smooth jazz."
+            "description": "Emilia Johanni is a singer with silk smooth voice, singing old facioned smooth jazz.",
+            "date": "2024-06-20",
+            "time": "18:00"
         },
         {
             "name": "FatBoo feat. Anna Maria Jovanni",
             "scene": "alternative",
             "genre": "bebop",
             "image": "./img/rusel.jpg",
-            "description": "Legendary Rusel Rarpet Band with legendary Anna Maria Jovanni. This must be something incedibly good."
+            "description": "Legendary Rusel Rarpet Band with legendary Anna Maria Jovanni. This must be something incedibly good.",
+            "date": "2024-06-20",
+            "time": "19:00"
         },
         {
             "name": "DJ Funk Srank",
             "scene": "alternative",
             "genre": "electro jazz",
             "image": "./img/dj.jpg",
-            "description": "Jazz DJ is not what you could expect during our festival, but yes, he is so good."
+            "description": "Jazz DJ is not what you could expect during our festival, but yes, he is so good.",
+            "date": "2024-06-20",
+            "time": "20:00"
         },
         {
             "name": "Tress Stress Assamble",
             "scene": "alternative",
             "genre": "bebop",
             "image": "./img/tress.jpg",
-            "description": "The band one of the kind. All proffesional musicians playing and singing the best they can."
+            "description": "The band one of the kind. All proffesional musicians playing and singing the best they can.",
+            "date": "2024-06-20",
+            "time": "21:00"
         },
         {
             "name": "Steve Clabby & The Pelicans",
             "scene": "alternative",
             "genre": "swing",
             "image": "./img/b1a.jpg",
-            "description": "The Pelicans are back! After 8 years they are on stage together again with Steve Clabby on mandolin."
+            "description": "The Pelicans are back! After 8 years they are on stage together again with Steve Clabby on mandolin.",
+            "date": "2024-06-20",
+            "time": "22:00"
         }
     ]
