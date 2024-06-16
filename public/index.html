@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/11edfe8d81.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <!-- Navigatin bar -->
     <nav>
@@ -61,13 +63,14 @@
         <h2>Program</h2>
         <hr>
         <div id="lineup">
-            <div class = row>
-                <div id="scene_main" class="column">Main Scene
-                </div>
-                <div id="scene_small" class="column">Small Scene
-                </div>
-                <div id="scene_alt" class="column">Alternative scene
-                </div>
+            <div id="scene_main" class="column">
+                Main Scene
+            </div>
+            <div id="scene_small" class="column">
+                Small Scene
+            </div>
+            <div id="scene_alt" class="column">
+                Alternative scene
             </div>
         </div>
     </section>
@@ -151,36 +154,38 @@
     <!-- Section contact -->
     <section id="contact">
         <h2>Contact</h2>
-        <div class="container">
-            <form action="/save_contact" method = "POST">
+        <div class="contact-container">
+            <form action="/save_contact" method="POST">
                 <label for="name">Your name:</label><br>
-                <input type="text" id="fullname" name="fullname" autocomplete="given-name" required placeholder="Your name..."><br>
+                <input type="text" id="fullname" name="fullname" autocomplete="given-name" required
+                    placeholder="Your name..."><br>
                 <label for="email">Your email:</label><br>
                 <input id="email" name="email" type="email" autocomplete="off" required placeholder="Your email..."><br>
                 <label for="subject">Subject:</label><br>
                 <input type="text" id="subject" name="subject" placeholder="Subject..."><br>
                 <label for="message">Message:</label><br>
-                <textarea name="message" rows="6" title="message" id="message" placeholder="Write a message..."></textarea><br>
+                <textarea name="message" rows="6" title="message" id="message"
+                    placeholder="Write a message..."></textarea><br>
 
                 <input type="submit" value="Submit">
             </form>
-    </div>
+        </div>
     </section>
     <!-- Section faq -->
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
-        <div class="container">
-            <div class="left">
+        <div class="flex-container-faq">
+            <div class="faq-left">
                 <ol>
                     <li onclick="faq1()">Where to buy tickets?</li>
                     <li onclick="faq2()">What happened if I miss a concert?</li>
                     <li onclick="faq3()">Is it restricted to wear colorful clothes?</li>
-                    <li onclick="faq4()">May I bring my own alcohol?</li>
+                    <li onclick="faq4()">May I bring my own food?</li>
                     <li onclick="faq5()">Are there any restrictions for children?</li>
                     <li onclick="faq6()">What is your favourite color?</li>
                 </ol>
             </div>
-            <div class="right">
+            <div class="faq-right">
                 <p id="answer">Click on question.</p>
             </div>
         </div>
@@ -192,13 +197,15 @@
             <p>Copyright &copy; Glod &amp; Jaro Entertainment.<br>All rights reserved.</p>
         </div>
         <div class="right">
-            <a href="#" target="_blank" title="Facebook"><img src="./img/face.png" class="logos" alt="logo"></a>
-            <a href="#" target="_blank" title="Twitter"><img src="./img/twit.png" class="logos" alt="logo"></a>
-            <a href="#" target="_blank" title="Youtube"><img src="./img/you.png" class="logos" alt="logo"></a>
-            <a href="#" target="_blank" title="Instagram"><img src="./img/inst.png" class="logos" alt="logo"></a>
-            <a href="#" target="_blank" title="TicToc"><img src="./img/tic.png" class="logos" alt="logo"></a>
+            <a href="facebook.html" target="_blank" title="Facebook"><img src="./img/face.png" class="logos"
+                    alt="logo"></a>
+            <a href="#" title="Twitter"><img src="./img/twit.png" class="logos" alt="logo"></a>
+            <a href="#" title="Youtube"><img src="./img/you.png" class="logos" alt="logo"></a>
+            <a href="#" title="Instagram"><img src="./img/inst.png" class="logos" alt="logo"></a>
+            <a href="#" title="TicToc"><img src="./img/tic.png" class="logos" alt="logo"></a>
         </div>
     </footer>
     <script src="./scripts/script.js"></script>
 </body>
+
 </html>

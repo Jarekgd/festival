@@ -13,7 +13,7 @@ const sqlite3 = require("sqlite3").verbose();
 
 const db = new sqlite3.Database("festival.db", (err) => {
   if (err) {
-    console.error("Error opening database:", err.message);
+    console.log("Database error.");
   } else {
     console.log("Database opened successfully.");
   }
@@ -23,6 +23,60 @@ app.set("view engine", "ejs");
 // Placement of EJS files:
 app.set("views", path.join(__dirname, "views"));
 
+//  lineup program
+let mainScene = [];
+let smallScene = [];
+let altScene = [];
+
+db.serialize(()=> {
+  db.all(`SELECT artist_name, performance_time
+  FROM artists
+  INNER JOIN performances ON artists.artist_id=performances.artist_id
+  INNER JOIN scenes ON performances.scene_id=scenes.scene_id
+  WHERE scenes.scene_id = 1 AND performance_date LIKE '%2024%'
+  ORDER BY performance_time;
+  `, [], (err, rows) => {
+    if(err){
+      console.log("Database error.");
+    }
+    else{
+      mainScene=rows;
+    }
+  });
+
+  db.all(`SELECT artist_name, performance_time
+    FROM artists
+    INNER JOIN performances ON artists.artist_id=performances.artist_id
+    INNER JOIN scenes ON performances.scene_id=scenes.scene_id
+    WHERE scenes.scene_id = 1 AND performance_date LIKE '%2024%'
+    ORDER BY performance_time;
+    `, [], (err, rows) => {
+      if(err){
+        console.log("Database error.");
+      }
+      else{
+        smallScene=rows;
+      }
+    });
+
+    db.all(`SELECT artist_name, performance_time
+      FROM artists
+      INNER JOIN performances ON artists.artist_id=performances.artist_id
+      INNER JOIN scenes ON performances.scene_id=scenes.scene_id
+      WHERE scenes.scene_id = 1 AND performance_date LIKE '%2024%'
+      ORDER BY performance_time;
+      `, [], (err, rows) => {
+        if(err){
+          console.log("Database error.");
+        }
+        else{
+          altScene=rows;
+        }
+      });
+
+});
+
+
 app.get("/", (req, res) => {
   const lineup_query = "SELECT artist_name, performance_time \
     FROM artists \
@@ -30,7 +84,7 @@ app.get("/", (req, res) => {
     WHERE performance_date LIKE '%2024%'";
   db.all(lineup_query, [], (err, rows) => {
     if (err) {
-      console.error("Error querying database: ", err.message);
+      console.log("Database error.");
       res.status(500).send("Database error");
       return;
     }
@@ -55,7 +109,7 @@ app.get("/musicians", (req, res) => {
     WHERE performance_date LIKE '%2024%'";
   db.all(musicians_query, [], (err, rows) => {
     if (err) {
-      console.error("Error querying musicians data:", err.message);
+      console.log("Database error.");
       res.status(500).send("Database error");
       return;
     }
@@ -89,7 +143,7 @@ app.get('/archive', (req, res) => {
 
   db.all(archiveQuery, [year], (err, rows) => {
     if (err) {
-      console.error('Error querying archive data:', err.message);
+      console.log("Database error.");
       res.status(500).send('Database error');
       return;
     }

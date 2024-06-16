@@ -90,15 +90,15 @@ function faq2() {
 }
 function faq3() {
   document.getElementById("answer").innerHTML =
-    "In general, you may wear many different colors but yes, there is one restriction:  rgb(75,12,68) trousers not allowed.";
+    "In general, you may wear many different colors but yes, there is one restriction: rgb(75,12,68) is not allowed.";
 }
 function faq4() {
   document.getElementById("answer").innerHTML =
-    "Of course you can bring your alcohol and drugs. If you want to buy, there are also many dealers around.";
+    "Yes, you can bring your own food, but we don't recomend it, because it will be confiscated anyway.";
 }
 function faq5() {
   document.getElementById("answer").innerHTML =
-    "You can bring your children if you want. We are children friendly. There is free alcohol and weed for minors.";
+    "No resttrictions. You can come with your children, grandchildren, parents, granparents, ancessors... ";
 }
 function faq6() {
   document.getElementById("answer").innerHTML =

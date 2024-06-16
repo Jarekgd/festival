@@ -1,6 +1,6 @@
 
 // AJAX JSON musicians description
-document.getElementById("musDesc").addListener = ("load", loadMusiciansDescriptions());
+document.getElementById("musicians-data").addListener = ("load", loadMusiciansDescriptions());
 function loadMusiciansDescriptions() {
   let xhr = new XMLHttpRequest();
   xhr.open("GET", "data/lineup.json", true);
@@ -9,9 +9,9 @@ function loadMusiciansDescriptions() {
       let musician = JSON.parse(this.responseText);
       let output1 = "";
       for (var i in musician) {
-        output1 += "<div>" + "<div>" +   musician[i].name + "</div> <img src=" + musician[i].image +" width='200px'></a>"  +
-        "<div style='font-size: 12px'>" + musician[i].description + "</div>" +"</div><br>";
-        document.getElementById("musDesc").innerHTML = output1;
+        output1 += "<div class='musicians-data'>" +  musician[i].name + "<br> <img src=" + musician[i].image +" width='220px'></a>"  +
+        "<div style='font-size: 12px'>" + "<br>" + musician[i].description + "</div></div>";
+        document.getElementById("musicians-data").innerHTML = output1;
       }
     }
   };
