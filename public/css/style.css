@@ -159,6 +159,11 @@ h2 {
 }
 
 /* Program small*/
+
+#program{
+  height:160%;
+}
+
 #lineup {
   text-align: center;
   display: flex;
@@ -384,6 +389,10 @@ footer {
 
 
   /* Program big*/
+  #program{
+    height:100%;
+  }
+
   #lineup {
     column-count: 3;
     text-align: center;
@@ -394,12 +403,6 @@ footer {
   #lineup ul li {
     text-decoration: none;
     padding: 20px;
-  }
-
-  .left {
-    display: flex;
-    flex: 50%;
-    padding: 0 30px;
   }
 
   .bg_img {
@@ -413,6 +416,12 @@ footer {
   .left img:hover {
     opacity: 70%;
     transition: 0.5s ease-in-out;
+  }
+
+  .left {
+    display: flex;
+    flex: 50%;
+    padding: 0 30px;
   }
 
   .right {
