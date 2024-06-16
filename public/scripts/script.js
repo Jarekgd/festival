@@ -55,15 +55,15 @@ function loadMusicians() {
       let artistAlt = "";
 
       for (let musician of musicians) {
-        let musicianShow = "<ul><li>" + musician.name + "<br>" + musician.time + "</li></ul>";
+        let musicianShow = "<ul><li>" + musician.name + " (" + musician.genre + ")<br>" + musician.time + "</li></ul>";
         if (musician.scene === "main"){
           artistMain += musicianShow;
         }
         else if (musician.scene === "small") {
           artistSmall += musicianShow;
         }
-        else if(musician.scene === "Alternative") {
-          artistAlt += "musicianShow"
+        else if(musician.scene === "alternative") {
+          artistAlt += musicianShow;
         }
       }
       document.getElementById("scene_main").innerHTML += artistMain;
