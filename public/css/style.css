@@ -160,8 +160,8 @@ h2 {
 
 /* Program small*/
 
-#program{
-  height:160%;
+#program {
+  height: 160%;
 }
 
 #lineup {
@@ -170,7 +170,7 @@ h2 {
   flex-direction: column;
 }
 
-.column{
+.column {
   flex: 30%;
   margin-top: 10px;
 }
@@ -195,11 +195,11 @@ section {
 }
 
 
-  .container-musicians {
-    display: flex;
-    flex-wrap:wrap;
-    text-align: justify;
-  }
+.container-musicians {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: justify;
+}
 
 
 
@@ -244,6 +244,7 @@ section {
 h3 {
   padding: 20px;
 }
+
 /* Contact page small*/
 .contact-container {
   display: flex;
@@ -252,18 +253,18 @@ h3 {
   padding: 60px;
 }
 
-form{
+form {
   width: 100%;
 }
 
-input{
+input {
   width: 100%;
   height: 30px;
   margin-bottom: 10px;
   padding: 5px;
 }
 
-textarea{
+textarea {
   width: 100%;
   padding: 5px;
 }
@@ -275,10 +276,10 @@ textarea{
   height: 80%;
 }
 
-.flex-container-faq{
+.flex-container-faq {
   display: flex;
   flex-direction: column;
-  font-size:14px;
+  font-size: 14px;
   padding: 10px 60px;
 }
 
@@ -312,20 +313,20 @@ footer {
   font-style: italic;
 }
 
-.musicians-data{
-  display:flex;
+.musicians-data {
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   z-index: 0;
 }
 
-.musicians-data >div {
+.musicians-data>div {
   justify-content: stretch;
   width: 100%;
   padding: 10px;
 }
 
-.musicians-data img{
+.musicians-data img {
   width: 100%;
 }
 
@@ -351,14 +352,14 @@ footer {
   /* The main page big*/
   #main-title {
 
-    top: 8%;
+    top: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2.5em;
   }
 
   #main-date {
-    top: 12%;
+    top: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2.5em;
@@ -389,8 +390,8 @@ footer {
 
 
   /* Program big*/
-  #program{
-    height:100%;
+  #program {
+    height: 100%;
   }
 
   #lineup {
@@ -402,7 +403,7 @@ footer {
 
   #lineup ul li {
     text-decoration: none;
-    padding: 20px;
+    padding: 5px;
   }
 
   .bg_img {
@@ -443,10 +444,10 @@ footer {
     justify-content: space-between;
   }
 
- /* Contact big */
- form{
-  width: 40%;
-}
+  /* Contact big */
+  form {
+    width: 40%;
+  }
 
   /* FAQ big */
   #faq {
@@ -454,25 +455,25 @@ footer {
     margin-bottom: 40px;
   }
 
-  .flex-container-faq{
+  .flex-container-faq {
     display: flex;
     flex-direction: row;
     font-size: 20px;
     padding: 40px 160px;
   }
-  
+
   .faq-left {
     padding: 40px;
     flex: 50%;
   }
-  
+
   .faq-right {
     color: rgb(246, 191, 124);
     background-color: #252323;
     padding: 40px;
     flex: 50%;
   }
-  
+
   #faq ol li {
     cursor: pointer;
     padding: 10px;
@@ -494,19 +495,19 @@ footer {
     justify-content: right;
   }
 
-  .musicians-data{
-    display:flex;
+  .musicians-data {
+    display: flex;
     flex-wrap: wrap;
-    justify-content:flex-start;
+    justify-content: flex-start;
     z-index: 0;
   }
-  
-  .musicians-data >div {
+
+  .musicians-data>div {
     justify-content: stretch;
     width: 250px;
   }
 
-  .musicians-data img{
+  .musicians-data img {
     width: 220px;
   }
 }
