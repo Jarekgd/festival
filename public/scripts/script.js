@@ -36,7 +36,7 @@ window.onclick = function (event) {
 // cookie banner
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("closeCookieButton").addEventListener("click", () => {
-      document.getElementById("cookie-banner").style.display = "none";
+    document.getElementById("cookie-banner").style.display = "none";
   });
 });
 
@@ -56,13 +56,13 @@ function loadMusicians() {
 
       for (let musician of musicians) {
         let musicianShow = "<ul><li>" + musician.name + " (" + musician.genre + ")<br>" + musician.time + "</li></ul>";
-        if (musician.scene === "main"){
+        if (musician.scene === "main") {
           artistMain += musicianShow;
         }
         else if (musician.scene === "small") {
           artistSmall += musicianShow;
         }
-        else if(musician.scene === "alternative") {
+        else if (musician.scene === "alternative") {
           artistAlt += musicianShow;
         }
       }

@@ -1,211 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festival</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/11edfe8d81.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/11edfe8d81.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <!-- Navigatin bar -->
     <nav>
-        <div class="logo">
-            <a href="#main"><img src="./img/logo.png" alt="logo" height="30"></a>
+      <div class="logo">
+        <a href="#main"><img src="./img/logo.png" alt="logo" height="30" /></a>
+      </div>
+      <!-- links to sections in menu -->
+      <ul>
+        <li><a href="#main">home</a></li>
+        <li><a href="#program">program</a></li>
+        <li><a href="#musicians">musicians</a></li>
+        <li><a href="#scenes">scenes</a></li>
+        <li><a href="#events">events</a></li>
+        <li><a href="#quizzes">quizzes</a></li>
+        <li><a href="#archive">archive</a></li>
+        <li><a href="#contact">contact</a></li>
+        <li><a href="#faq">faq</a></li>
+      </ul>
+      <!-- link to sections in dropdown menu -->
+      <div class="dropdown">
+        <div class="fas fa-bars" onclick="toggleDropdown()"></div>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#main">home</a>
+          <a href="#program">program</a>
+          <a href="#musicians">musicians</a>
+          <a href="#scenes">scenes</a>
+          <a href="#events">events</a>
+          <a href="#quizzes">quizzes</a>
+          <a href="#archive">archive</a>
+          <a href="#contact">contact</a>
+          <a href="#faq">faq</a>
         </div>
-        <!-- links to sections in menu -->
-        <ul>
-            <li><a href="#main">home</a></li>
-            <li><a href="#program">program</a></li>
-            <li><a href="#musicians">musicians</a></li>
-            <li><a href="#scenes">scenes</a></li>
-            <li><a href="#events">events</a></li>
-            <li><a href="#quizzes">quizzes</a></li>
-            <li><a href="#archive">archive</a></li>
-            <li><a href="#contact">contact</a></li>
-            <li><a href="#faq">faq</a></li>
-        </ul>
-        <!-- link to sections in dropdown menu -->
-        <div class="dropdown">
-            <div class="fas fa-bars" onclick="toggleDropdown()"></div>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#main">home</a>
-                <a href="#program">program</a>
-                <a href="#musicians">musicians</a>
-                <a href="#scenes">scenes</a>
-                <a href="#events">events</a>
-                <a href="#quizzes">quizzes</a>
-                <a href="#archive">archive</a>
-                <a href="#contact">contact</a>
-                <a href="#faq">faq</a>
-            </div>
-        </div>
+      </div>
     </nav>
     <!-- Home page section -->
     <section id="main">
-        <div id="main-title">
-            <h1>Contemporary Jazz Festival</h1>
-        </div>
-        <div id="main-date">20.06.2024</div>
-        <div id="countdown"></div>
-        <div id="cookie-banner">
-            <h4>Warning!</h4>
-            <p>This page uses cookies.</p>
-            <button id="closeCookieButton" title="cookiesButton">X</button>
-        </div>
+      <div id="main-title">
+        <h1>Contemporary Jazz Festival</h1>
+      </div>
+      <div id="main-date">20.06.2024</div>
+      <div id="countdown"></div>
+      <div id="cookie-banner">
+        <h4>Warning!</h4>
+        <p>This page uses cookies.</p>
+        <button id="closeCookieButton" title="cookiesButton">X</button>
+      </div>
     </section>
     <!-- Section program / lineup -->
     <section id="program">
-        <h2>Program</h2>
-        <hr>
-        <div id="lineup">
-            <div id="scene_main" class="column">
-                Main Scene
-            </div>
-            <div id="scene_small" class="column">
-                Small Scene
-            </div>
-            <div id="scene_alt" class="column">
-                Alternative scene
-            </div>
-        </div>
+      <h2>Program</h2>
+      <hr />
+      <div id="lineup">
+        <div id="scene_main" class="column">Main Scene</div>
+        <div id="scene_small" class="column">Small Scene</div>
+        <div id="scene_alt" class="column">Alternative scene</div>
+      </div>
     </section>
     <!-- Section musicians -->
     <section id="musicians">
-        <h2>Musicians</h2>
-        <div class="container">
-            <div class="left">
-                <a href="musicians.html"><img src="img/b4a.jpg" class="img_left" alt="image" title="musicians"></a>
-            </div>
-            <div class="right">
-                This year we have invited top musician representing different styles of jazz music.
-                We have diversity of styles: from traditional swing, bebop musician,
-                through ethnic influences on jazz music to contemporary, experimental electronic music.
-                Each day fans of jazz may find something interesting, according to personal preferences.
-            </div>
+      <h2>Musicians</h2>
+      <div class="container">
+        <div class="left">
+          <a href="musicians.html"
+            ><img
+              src="img/b4a.jpg"
+              class="img_left"
+              alt="musician1"
+              title="musicians"
+          /></a>
         </div>
+        <div class="right">
+          This year we have invited top musician representing different styles
+          of jazz music. We have diversity of styles: from traditional swing,
+          bebop musician, through ethnic influences on jazz music to
+          contemporary, experimental electronic music. Each day fans of jazz may
+          find something interesting, according to personal preferences.
+        </div>
+      </div>
     </section>
     <!-- Section scenes -->
     <section id="scenes">
-        <h2>Scenes</h2>
-        <div class="container">
-            <div class="left">
-                <div class="bg_img">
-                    <a href="scenes.html"><img src="img/b6a.jpg" class="img_left" alt="image" title="scenes"></a>
-                </div>
-            </div>
-            <div class="right">
-                Our artists will give performances on three stages.
-                The main stage is situated in the theater in the city center.
-                There is also alternative scene located 500 meters away.
-                The third scene is experimental, with different musicians and different styles.
-            </div>
+      <h2>Scenes</h2>
+      <div class="container">
+        <div class="left">
+          <div class="bg_img">
+            <a href="scenes.html"
+              ><img
+                src="img/b6a.jpg"
+                class="img_left"
+                alt="musician2"
+                title="scenes"
+            /></a>
+          </div>
         </div>
+        <div class="right">
+          Our artists will give performances on three stages. The main stage is
+          situated in the theater in the city center. There is also alternative
+          scene located 500 meters away. The third scene is experimental, with
+          different musicians and different styles.
+        </div>
+      </div>
     </section>
     <!-- Section events -->
     <section id="events">
-        <div>
-            <h2>Other events</h2>
+      <div>
+        <h2>Other events</h2>
+      </div>
+      <div class="container">
+        <div class="left">
+          <div class="bg_img">
+            <a href="events.html"
+              ><img
+                src="img/b9a.jpg"
+                class="img_left"
+                alt="musician3"
+                title="events"
+            /></a>
+          </div>
         </div>
-        <div class="container">
-            <div class="left">
-                <div class="bg_img">
-                    <a href="events.html"><img src="img/b9a.jpg" class="img_left" alt="image" title="events"></a>
-                </div>
-            </div>
-            <div class="right">
-                There are additional events in the city like films projections - all about jazz music, discussions and
-                meetings with musicians.
-                There are clubs where you can dance to jazz music!!!
-            </div>
+        <div class="right">
+          There are additional events in the city like films projections - all
+          about jazz music, discussions and meetings with musicians. There are
+          clubs where you can dance to jazz music!!!
         </div>
+      </div>
     </section>
     <!-- Section quizzes -->
     <section id="quizzes">
-        <h2>Quizzes</h2>
-        <div class="container">
-            <div class="left">
-                <div class="bg_img">
-                    <a href="quizzes.html"><img src="img/q1a.jpg" class="img_left" alt="image" title="quizzes"></a>
-                </div>
-            </div>
-            <div class="right">
-                Try our quizzes about jazz music, jazz history or general music knowledge.
-            </div>
+      <h2>Quizzes</h2>
+      <div class="container">
+        <div class="left">
+          <div class="bg_img">
+            <a href="quizzes.html"
+              ><img
+                src="img/q1a.jpg"
+                class="img_left"
+                alt="musician4"
+                title="quizzes"
+            /></a>
+          </div>
         </div>
+        <div class="right">
+          Try our quizzes about jazz music, jazz history or general music
+          knowledge.
+        </div>
+      </div>
     </section>
     <!-- Section archive -->
     <section id="archive">
-        <h2>Archive festivals</h2>
-        <div class="container">
-            <div class="left">
-                <a href="archive.html" title="Archive"><img src="img/ar1a.jpg" class="img_left" alt="image"></a>
-            </div>
-            <div class="right">
-                Our Contemporary Jazz Festival has long tradition. The first edition took place in 2021.
-                Check our previous editions and artists performing in every year.
-            </div>
+      <h2>Archive festivals</h2>
+      <div class="container">
+        <div class="left">
+          <a href="archive.html" title="Archive"
+            ><img src="img/ar1a.jpg" class="img_left" alt="archive image"
+          /></a>
         </div>
+        <div class="right">
+          Our Contemporary Jazz Festival has long tradition. The first edition
+          took place in 2021. Check our previous editions and artists performing
+          in every year.
+        </div>
+      </div>
     </section>
     <!-- Section contact -->
     <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-container">
-            <form action="/save_contact" method="POST">
-                <label for="name">Your name:</label><br>
-                <input type="text" id="fullname" name="fullname" autocomplete="given-name" required
-                    placeholder="Your name..."><br>
-                <label for="email">Your email:</label><br>
-                <input id="email" name="email" type="email" autocomplete="off" required placeholder="Your email..."><br>
-                <label for="subject">Subject:</label><br>
-                <input type="text" id="subject" name="subject" placeholder="Subject..."><br>
-                <label for="message">Message:</label><br>
-                <textarea name="message" rows="6" title="message" id="message"
-                    placeholder="Write a message..."></textarea><br>
-
-                <input type="submit" value="Submit">
-            </form>
-        </div>
+      <h2>Contact</h2>
+      <div class="contact-container">
+        <form id="contactForm" action="/save_contact" method="POST">
+          <label for="name">Your name:</label><br />
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            autocomplete="given-name"
+            required
+            placeholder="Your name..."
+          /><br />
+          <label for="email">Your email:</label><br />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="off"
+            required
+            placeholder="Your email..."
+          /><br />
+          <label for="subject">Subject:</label><br />
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject..."
+          /><br />
+          <label for="message">Message:</label><br />
+          <textarea
+            name="message"
+            rows="6"
+            title="message"
+            id="message"
+            placeholder="Write a message..."
+          ></textarea
+          ><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </section>
     <!-- Section faq -->
     <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="flex-container-faq">
-            <div class="faq-left">
-                <ol>
-                    <li onclick="faq1()">Where to buy tickets?</li>
-                    <li onclick="faq2()">What happened if I miss a concert?</li>
-                    <li onclick="faq3()">Is it restricted to wear colorful clothes?</li>
-                    <li onclick="faq4()">May I bring my own food?</li>
-                    <li onclick="faq5()">Are there any restrictions for children?</li>
-                    <li onclick="faq6()">What is your favourite color?</li>
-                </ol>
-            </div>
-            <div class="faq-right">
-                <p id="answer">Click on question.</p>
-            </div>
+      <h2>Frequently Asked Questions</h2>
+      <div class="flex-container-faq">
+        <div class="faq-left">
+          <ol>
+            <li onclick="faq1()">Where to buy tickets?</li>
+            <li onclick="faq2()">What happened if I miss a concert?</li>
+            <li onclick="faq3()">Is it restricted to wear colorful clothes?</li>
+            <li onclick="faq4()">May I bring my own food?</li>
+            <li onclick="faq5()">Are there any restrictions for children?</li>
+            <li onclick="faq6()">What is your favourite color?</li>
+          </ol>
         </div>
+        <div class="faq-right">
+          <p id="answer">Click on question.</p>
+        </div>
+      </div>
     </section>
-    <hr>
+    <hr />
     <!-- Footer -->
     <footer>
-        <div class="left">
-            <p>Copyright &copy; Glod &amp; Jaro Entertainment.<br>All rights reserved.</p>
-        </div>
-        <div class="right">
-            <a href="facebook.html" target="_blank" title="Facebook"><img src="./img/face.png" class="logos"
-                    alt="logo"></a>
-            <a href="#" title="Twitter"><img src="./img/twit.png" class="logos" alt="logo"></a>
-            <a href="#" title="Youtube"><img src="./img/you.png" class="logos" alt="logo"></a>
-            <a href="#" title="Instagram"><img src="./img/inst.png" class="logos" alt="logo"></a>
-            <a href="#" title="TicToc"><img src="./img/tic.png" class="logos" alt="logo"></a>
-        </div>
+      <div class="left">
+        <p>
+          Copyright &copy; Glod &amp; Jaro Entertainment.<br />All rights
+          reserved.
+        </p>
+      </div>
+      <div class="right">
+        <a href="facebook.html" target="_blank" title="Facebook"
+          ><img src="./img/face.png" class="logos" alt="facebook logo"
+        /></a>
+        <a href="#" title="Twitter"
+          ><img src="./img/twit.png" class="logos" alt="lotwitter logogo"
+        /></a>
+        <a href="#" title="Youtube"
+          ><img src="./img/you.png" class="logos" alt="youtube logo"
+        /></a>
+        <a href="#" title="Instagram"
+          ><img src="./img/inst.png" class="logos" alt="instagram logo"
+        /></a>
+        <a href="#" title="TicToc"
+          ><img src="./img/tic.png" class="logos" alt="tictoc logo"
+        /></a>
+      </div>
     </footer>
     <script src="./scripts/script.js"></script>
-</body>
-
+  </body>
 </html>

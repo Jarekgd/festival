@@ -1,81 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festival</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/11edfe8d81.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/11edfe8d81.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <nav>
-        <div class="logo">
-            <a href="index.html#main"><img src="img/logo.png" alt="logo" height="30"></a>
+      <div class="logo">
+        <a href="index.html#main"
+          ><img src="img/logo.png" alt="logo" height="30"
+        /></a>
+      </div>
+      <ul>
+        <li><a href="index.html#main">home</a></li>
+        <li><a href="index.html#program">program</a></li>
+        <li><a href="index.html#musicians">musicians</a></li>
+        <li><a href="index.html#scenes">scenes</a></li>
+        <li><a href="index.html#events">events</a></li>
+        <li><a href="index.html#quizzes">quizzes</a></li>
+        <li><a href="index.html#archive">archive</a></li>
+        <li><a href="index.html#contact">contact</a></li>
+        <li><a href="index.html#faq">faq</a></li>
+      </ul>
+      <div class="dropdown">
+        <div class="fas fa-bars" onclick="toggleDropdown()"></div>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html#main">home</a>
+          <a href="index.html#program">program</a>
+          <a href="index.html#musicians">musicians</a>
+          <a href="index.html#scenes">scenes</a>
+          <a href="index.html#events">events</a>
+          <a href="index.html#quizzes">quizzes</a>
+          <a href="index.html#archive">archive</a>
+          <a href="index.html#contact">contact</a>
+          <a href="index.html#faq">faq</a>
         </div>
-        <ul>
-            <li><a href="index.html#main">home</a></li>
-            <li><a href="index.html#program">program</a></li>
-            <li><a href="index.html#musicians">musicians</a></li>
-            <li><a href="index.html#scenes">scenes</a></li>
-            <li><a href="index.html#events">events</a></li>
-            <li><a href="index.html#quizzes">quizzes</a></li>
-            <li><a href="index.html#archive">archive</a></li>
-            <li><a href="index.html#contact">contact</a></li>
-            <li><a href="index.html#faq">faq</a></li>
-        </ul>
-        <div class="dropdown">
-            <div class="fas fa-bars" onclick="toggleDropdown()"></div>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="index.html#main">home</a>
-                <a href="index.html#program">program</a>
-                <a href="index.html#musicians">musicians</a>
-                <a href="index.html#scenes">scenes</a>
-                <a href="index.html#events">events</a>
-                <a href="index.html#quizzes">quizzes</a>
-                <a href="index.html#archive">archive</a>
-                <a href="index.html#contact">contact</a>
-                <a href="index.html#faq">faq</a>
-            </div>
-        </div>
+      </div>
     </nav>
     <section class="triple">
-        <h2>Archive</h2>
-        <div class="container">
-            <div class="column-triple">
-                <div>
-                    <h3>2023</h3>
-                    <img src="img/y1.jpg" class="img_left" alt="image">
-                </div>
-                <div>
-                    I bet you still sing hits from the last year festival. Look again who was our guest.
-                </div>
-            </div>
-            <div class="column-triple">
-                <div>
-                    <h3>2022</h3>
-                    <img src="img/y2.jpg" class="img_left" alt="image">
-                </div>
-                <div>
-                    Fantastic year for music. One of the best festival we have ever organised. 
-                </div>
-            </div>
-            <div class="column-triple">
-                <div>
-                    <h3>2021</h3>
-                    <img src="img/y3.jpg" class="img_left" alt="image">
-                </div>
-                <div>
-                    Unforgettable 2021 when we all started to feel release after COVID pandemic was explosion of new talents.
-                </div>
-            </div>
+      <h2>Archive</h2>
+      <div class="flex-container-arch">
+        <div class="arch-left">
+          <label for="yearDropdown"></label>
+          <select name="dropdown" id="dropdown" onchange="filterData()">
+            <option value="" selected></option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
         </div>
+        <div class="arch-right">
+          <ul id="display">
+            Select a year.
+          </ul>
+        </div>
+      </div>
     </section>
-   
 
-
-
-
-
-    <script src="scripts/script.js"></script>
-</body>
+    <script src="./scripts/archive.js"></script>
+  </body>
 </html>

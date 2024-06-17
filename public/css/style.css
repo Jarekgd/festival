@@ -151,6 +151,13 @@ a:active {
   line-height: 50%;
 }
 
+h1 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
 h2 {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -200,9 +207,7 @@ section {
   text-align: justify;
 }
 
-
-
-/* cotainer small */
+/* container small */
 .left {
   display: row;
   justify-content: space-around;
@@ -221,15 +226,9 @@ section {
   width: 100%;
 }
 
-/* .img_map {
-  width: 30%;
-} */
-
 .img_right {
   width: 100%;
 }
-
-
 
 .column-triple {
   display: flex;
@@ -242,6 +241,31 @@ section {
 
 h3 {
   padding: 20px;
+}
+
+/* Archive small */
+.flex-container-arch {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  padding: 10px 60px;
+}
+
+.arch-left {
+  padding: 10px;
+  flex: 50%;
+}
+
+.arch-right {
+  color: rgb(246, 191, 124);
+  padding: 10px;
+  flex: 50%;
+  line-height: 200%;
+}
+
+select {
+  cursor: pointer;
+  padding: 10px;
 }
 
 /* Contact page small*/
@@ -299,6 +323,8 @@ textarea {
   cursor: pointer;
   padding: 10px;
 }
+
+
 
 /* Footer small*/
 .logos {

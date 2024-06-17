@@ -1,75 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Festival</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/11edfe8d81.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/11edfe8d81.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <nav>
-        <div class="logo">
-            <a href="index.html#main"><img src="img/logo.png" alt="logo" height="30px"></a>
+      <div class="logo">
+        <a href="index.html#main"
+          ><img src="img/logo.png" alt="logo" height="30px"
+        /></a>
+      </div>
+      <ul>
+        <li><a href="index.html#main">home</a></li>
+        <li><a href="index.html#program">program</a></li>
+        <li><a href="index.html#musicians">musicians</a></li>
+        <li><a href="index.html#scenes">scenes</a></li>
+        <li><a href="index.html#events">events</a></li>
+        <li><a href="index.html#quizzes">quizzes</a></li>
+        <li><a href="index.html#archive">archive</a></li>
+        <li><a href="index.html#contact">contact</a></li>
+        <li><a href="index.html#faq">faq</a></li>
+      </ul>
+      <div class="dropdown">
+        <div class="fas fa-bars" onclick="toggleDropdown()"></div>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="index.html#main">home</a>
+          <a href="index.html#program">program</a>
+          <a href="index.html#musicians">musicians</a>
+          <a href="index.html#scenes">scenes</a>
+          <a href="index.html#events">events</a>
+          <a href="index.html#quizzes">quizzes</a>
+          <a href="index.html#archive">archive</a>
+          <a href="index.html#contact">contact</a>
+          <a href="index.html#faq">faq</a>
         </div>
-        <ul>
-            <li><a href="index.html#main">home</a></li>
-            <li><a href="index.html#program">program</a></li>
-            <li><a href="index.html#musicians">musicians</a></li>
-            <li><a href="index.html#scenes">scenes</a></li>
-            <li><a href="index.html#events">events</a></li>
-            <li><a href="index.html#quizzes">quizzes</a></li>
-            <li><a href="index.html#archive">archive</a></li>
-            <li><a href="index.html#contact">contact</a></li>
-            <li><a href="index.html#faq">faq</a></li>
-        </ul>
-        <div class="dropdown">
-            <div class="fas fa-bars" onclick="toggleDropdown()"></div>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="index.html#main">home</a>
-                <a href="index.html#program">program</a>
-                <a href="index.html#musicians">musicians</a>
-                <a href="index.html#scenes">scenes</a>
-                <a href="index.html#events">events</a>
-                <a href="index.html#quizzes">quizzes</a>
-                <a href="index.html#archive">archive</a>
-                <a href="index.html#contact">contact</a>
-                <a href="index.html#faq">faq</a>
-            </div>
-        </div>
+      </div>
     </nav>
     <section class="triple">
-        <h2>Other Events</h2>
-        <div class="container">
-            <div class="column-triple">
-                <div>
-                    <h3>Dancing clubs</h3>
-                    <img src="img/e1.jpg" class="img_left" alt="image">
-                </div>
-                <div>
-                    Have a good time dancing to the jazz music. No hiphop, no disco but dancing to the real swing and bebop groove! Move to early years of the 20th century and dance charleston.
-                </div>
-            </div>
-            <div class="column-triple">
-                <div>
-                    <h3>Films</h3>
-                    <img src="img/ee1.jpg" class="img_left" alt="image">
-                </div>
-                <div>
-                    Many interesting musical films, older and new productions. Documentary films about famous jazz players. The latest "How jazzy he was", "Swing my baby", "New Orleans legend" - these are only a few of titles of the films we will present.
-                </div>
-            </div>
-            <div class="column-triple">
-                <div>
-                    <h3>Discussions and interviews</h3>
-                    <img src="img/ee3.jpg" class="img_left" alt="image">
-                </div>
-                <div>
-                    You can meet and talk to our musicians. Our musicians are very interesting to meet their fans and tell about their work. Maybe it is the only chance to ask a question to your idol.
-                </div>
-            </div>
+      <h1>Other Events</h1>
+      <div class="container">
+        <div class="column-triple">
+          <div>
+            <h2>Dancing clubs</h2>
+            <img src="img/e1.jpg" class="img_left" alt="image" />
+          </div>
+          <div>
+            Have a good time dancing to the jazz music. No hiphop, no disco but
+            dancing to the real swing and bebop groove! Move to early years of
+            the 20th century and dance charleston.
+          </div>
         </div>
+        <div class="column-triple">
+          <div>
+            <h2>Films</h2>
+            <img src="img/ee1.jpg" class="img_left" alt="image" />
+          </div>
+          <div>
+            Many interesting musical films, older and new productions.
+            Documentary films about famous jazz players. The latest "How jazzy
+            he was", "Swing my baby", "New Orleans legend" - these are only a
+            few of titles of the films we will present.
+          </div>
+        </div>
+        <div class="column-triple">
+          <div>
+            <h2>Discussions and interviews</h2>
+            <img src="img/ee3.jpg" class="img_left" alt="image" />
+          </div>
+          <div>
+            You can meet and talk to our musicians. Our musicians are very
+            interesting to meet their fans and tell about their work. Maybe it
+            is the only chance to ask a question to your idol.
+          </div>
+        </div>
+      </div>
     </section>
     <script src="scripts/script.js"></script>
-</body>
+  </body>
 </html>

@@ -207,7 +207,7 @@
             "time": "18:00"
         },
         {
-            "name": "FatBoo feat. Anna Maria Jovanni",
+            "name": "FatBoo feat. Anna Maria Boo",
             "scene": "alternative",
             "genre": "bebop",
             "image": "./img/rusel.jpg",
@@ -241,5 +241,293 @@
             "description": "The Pelicans are back! After 8 years they are on stage together again with Steve Clabby on mandolin.",
             "date": "2024-06-20",
             "time": "22:00"
+        },
+        {
+            "name": "Jaroslaw Glod",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "Annola Clock",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "Alberto Pitagoras",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "The Sabarats",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "Elton Quantum Ph.",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "The Protacs",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "Playground Jazz Band",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "Hello Joe Band",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "Barman Mood",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "F.F.F Orchestra",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "OSoleMio Band",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2023-06-22",
+            "time": ""
+        },
+        {
+            "name": "Traktor Quartet",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Amanda Perestaltyka",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Dance For Money Band",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Joe Lipstick",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Heynau Crackow",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Ben & Julia Moderate",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Zou King",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Epiphan Goutani",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Phill & The Collinsos",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Ella Flingston",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "6Pack",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Meminm",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Rabarbar Stressnut",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "Morge Gaicull",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2022-06-22",
+            "time": ""
+        },
+        {
+            "name": "The Metales",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2021-06-22",
+            "time": ""
+        },
+        {
+            "name": "Shock Hirra",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2021-06-22",
+            "time": ""
+        },
+        {
+            "name": "Don Sarranti",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2021-06-22",
+            "time": ""
+        },
+        {
+            "name": "Sam Ephidiascop",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2021-06-22",
+            "time": ""
+        },
+        {
+            "name": "Lech Kolderka",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2021-06-22",
+            "time": ""
+        },
+        {
+            "name": "Anikita",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2021-06-22",
+            "time": ""
+        },
+        {
+            "name": "Soul Jazz Band",
+            "scene": "",
+            "genre": "",
+            "image": "",
+            "description": "",
+            "date": "2021-06-22",
+            "time": ""
         }
     ]
