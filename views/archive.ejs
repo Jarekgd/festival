@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ontemporary Jazz Festival 2024 - Archive</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/11edfe8d81.js" crossorigin="anonymous"></script>
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/11edfe8d81.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
-  <nav>
-    <%- include('nav_other') %>
-</nav>
+  <body>
+    <nav><%- include('nav_other') %></nav>
     <section class="triple">
-        <h2>Archive</h2>
-        <div class="container">
-            
-            <form action="/archive" method="GET">
-                <label for="year">Choose a year:</label>
-                <select name="year" id="year">
-                  <option value="2021">2021</option>
-                  <option value="2022">2022</option>
-                  <option value="2023">2023</option>
-                  <option value="2024">2024</option>
-                </select>
-                <button type="submit">Show Artists</button>
-              </form>
-            
-              <% if (artists && artists.length > 0) { %>
-                
-                <ul>
-                  <% artists.forEach(artist => { %>
-                    <li><%= artist.artist_name %></li>
-                  <% }); %>
-                </ul>
-              <% } else if (artists) { %>
-                <p>No artists found for the selected year.</p>
-              <% } %>
-        </div>
+      <h2>Archive</h2>
+      <br /><br />
+      <div class="container">
+        <form action="/archive" method="GET">
+          <label for="year">Choose a year:</label>
+          <select name="year" id="year">
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+          <button type="submit">Show Artists</button>
+        </form>
+
+        <% if (artists && artists.length > 0) { %>
+
+        <ul>
+          <% artists.forEach(artist => { %>
+          <li style="list-style: square; line-height: 50%">
+            <%= artist.artist_name %>
+          </li>
+          <br />
+          <% }); %>
+        </ul>
+        <% } else if (artists) { %>
+        <p>No artists found for the selected year.</p>
+        <% } %>
+      </div>
     </section>
     <script src="scripts/script.js"></script>
-</body>
-
+  </body>
 </html>
