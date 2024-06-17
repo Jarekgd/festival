@@ -47,7 +47,7 @@
       <h2>Archive</h2>
       <div class="flex-container-arch">
         <div class="arch-left">
-          <label for="yearDropdown"></label>
+          <label for="yearDropdown">Select a year</label><br />
           <select name="dropdown" id="dropdown" onchange="filterData()">
             <option value="" selected></option>
             <option value="2021">2021</option>
@@ -57,6 +57,7 @@
           </select>
         </div>
         <div class="arch-right">
+          <h3 class="chosenYear"></h3>
           <ul id="display">
             Select a year.
           </ul>

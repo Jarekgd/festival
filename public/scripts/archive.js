@@ -2,6 +2,7 @@ function filterData() {
     var dropdown = document.getElementById("dropdown");
     var year = dropdown.value;
     var display = document.getElementById("display");
+
     display.innerHTML = ""; // Clear previous results
 
     if (year) {

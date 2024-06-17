@@ -246,13 +246,13 @@ h3 {
 /* Archive small */
 .flex-container-arch {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-size: 14px;
   padding: 10px 60px;
 }
 
 .arch-left {
-  padding: 10px;
+
   flex: 50%;
 }
 
@@ -465,6 +465,19 @@ footer {
   .column-triple {
     padding: 0px 10px;
     width: 100%;
+  }
+
+  /* Archive big */
+  .flex-container-arch {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    padding: 10px 60px;
+  }
+
+  .arch-left {
+    padding-left: 350px;
+    flex: 50%;
   }
 
   /* Contact big */
