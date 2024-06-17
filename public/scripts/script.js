@@ -105,5 +105,25 @@ function faq6() {
     "My favourite color is rgb(75,12,68)";
 }
 
+// contact form
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+  event.preventDefault();
 
+  const formData = {
+    name: document.getElementById('fullname').value,
+    email: document.getElementById('email').value,
+    subject: document.getElementById('subject').value,
+    message: document.getElementById('message').value
+  };
+
+  let contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+
+  contacts.push(formData);
+
+  localStorage.setItem('contacts', JSON.stringify(contacts));
+
+  document.getElementById('contactForm').reset();
+
+  alert('Message sent successfully!');
+});
 
