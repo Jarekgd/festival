@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Persons Quiz</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .image-box,
+      .answer-box {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #ccc;
+        margin: 10px;
+        text-align: center;
+        line-height: 200px;
+      }
+      .image-box img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;
+      }
+      .answer-box {
+        border-style: dashed;
+        min-height: 50px; /* to ensure drop zone height */
+      }
+      .hidden {
+        display: none;
+      }
+      .results {
+        margin-top: 20px;
+        display: none; /* initially hidden */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guess the Persons Quiz</h1>
+
+    <div class="container">
+      <!-- Image boxes for drag and drop -->
+      <div
+        class="image-box"
+        id="image1"
+        draggable="true"
+        ondragstart="drag(event)"
+      >
+        <img src="image1.jpg" alt="Person 1" />
+      </div>
+      <div
+        class="image-box"
+        id="image2"
+        draggable="true"
+        ondragstart="drag(event)"
+      >
+        <img src="image2.jpg" alt="Person 2" />
+      </div>
+      <div
+        class="image-box"
+        id="image3"
+        draggable="true"
+        ondragstart="drag(event)"
+      >
+        <img src="image3.jpg" alt="Person 3" />
+      </div>
+      <div
+        class="image-box"
+        id="image4"
+        draggable="true"
+        ondragstart="drag(event)"
+      >
+        <img src="image4.jpg" alt="Person 4" />
+      </div>
+      <div
+        class="image-box"
+        id="image5"
+        draggable="true"
+        ondragstart="drag(event)"
+      >
+        <img src="image5.jpg" alt="Person 5" />
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Answer boxes where images will be dropped -->
+      <div
+        class="answer-box"
+        id="answer1"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      ></div>
+      <div
+        class="answer-box"
+        id="answer2"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      ></div>
+      <div
+        class="answer-box"
+        id="answer3"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      ></div>
+      <div
+        class="answer-box"
+        id="answer4"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      ></div>
+      <div
+        class="answer-box"
+        id="answer5"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      ></div>
+    </div>
+
+    <div class="container">
+      <!-- Submit button -->
+      <button onclick="showResults()">Submit</button>
+    </div>
+
+    <div class="results" id="results">
+      <!-- Results will be shown here -->
+      <h2>Results</h2>
+      <ul id="results-list"></ul>
+    </div>
+
+    <!-- JavaScript for drag and drop functionality -->
+    <script>
+      function allowDrop(event) {
+        event.preventDefault();
+      }
+
+      function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+      }
+
+      function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("text");
+        var draggedElement = document.getElementById(data);
+        event.target.appendChild(draggedElement);
+        draggedElement.style.margin = "0";
+        draggedElement.setAttribute("draggable", "false");
+      }
+
+      function showResults() {
+        var resultsList = document.getElementById("results-list");
+        resultsList.innerHTML = ""; // Clear previous results
+
+        var answerBoxes = document.querySelectorAll(".answer-box");
+        answerBoxes.forEach(function (answerBox) {
+          var image = answerBox.querySelector("img");
+          if (image) {
+            var personName = image.alt; // Get the person's name from alt attribute
+            var listItem = document.createElement("li");
+            listItem.textContent = personName;
+            resultsList.appendChild(listItem);
+          }
+        });
+
+        var resultsDiv = document.getElementById("results");
+        resultsDiv.style.display = "block"; // Show results
+      }
+    </script>
+  </body>
+</html>

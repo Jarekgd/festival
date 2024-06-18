@@ -1,4 +1,5 @@
-let festivalDate = new Date("2024-06-20").getTime();
+// variables to calculate days to festival
+const festivalDate = new Date("2024-06-20").getTime();
 let dateNow = new Date().getTime();
 let countDown = festivalDate - dateNow;
 let days = Math.round(countDown / (1000 * 3600 * 24));
@@ -16,7 +17,7 @@ if (days > 1) {
 
 // toggle menu drop down list
 function toggleDropdown() {
-  document.getElementById("myDropdown").classList.toggle("show");
+  document.getElementById("myDropdown").classList.toggle("show"); // classList returns class names
 }
 
 // close drop down list when click outside the button
@@ -41,13 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // AJAX JSON linep
-document.addEventListener("DOMContentLoaded", loadMusicians);
+document.addEventListener("DOMContentLoaded", loadMusicians); //creates list of musicians after document is all loaded
 function loadMusicians() {
-  let xhr = new XMLHttpRequest();
-  xhr.open("GET", "data/lineup.json", true);
+  let xhr = new XMLHttpRequest(); // variable to dynamically comunicate with server
+  xhr.open("GET", "data/lineup.json", true); // initializes request
   xhr.onload = function () {
-    if (this.status == 200) {
-      let musicians = JSON.parse(this.responseText);
+    if (this.status == 200) { // 200 - status of server without any errors
+      let musicians = JSON.parse(this.responseText); // converts json into js object
+      // sorting musicians compering two time values:
       musicians.sort((a, b) => a.time.localeCompare(b.time));
 
       let artistMain = "";
@@ -106,8 +108,9 @@ function faq6() {
 }
 
 // contact form
+// 
 document.getElementById('contactForm').addEventListener('submit', function (event) {
-  event.preventDefault();
+  event.preventDefault(); // prevents from sending data and reloading page
 
   const formData = {
     name: document.getElementById('fullname').value,
@@ -116,14 +119,12 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     message: document.getElementById('message').value
   };
 
+  // gets contacts from local storage, converts into js array,
+  // when empty creates empty array
   let contacts = JSON.parse(localStorage.getItem('contacts')) || [];
-
-  contacts.push(formData);
-
-  localStorage.setItem('contacts', JSON.stringify(contacts));
-
-  document.getElementById('contactForm').reset();
-
+  contacts.push(formData);  // adds data object to array
+  localStorage.setItem('contacts', JSON.stringify(contacts)); // converts back to json format
+  document.getElementById('contactForm').reset(); // resets form to default values
   alert('Message sent successfully!');
 });
 
