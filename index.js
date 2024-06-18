@@ -4,12 +4,13 @@ const PORT = 5000;
 const path = require("path"); // Path to EJS files
 
 // middleware
-const bodyparser = require("body-parser");
-app.use(bodyparser.urlencoded({ extended: true }));
-app.use(bodyparser.json());
+const bodyparser = require("body-parser"); // extracts whole body part of html page
+app.use(bodyparser.urlencoded({ extended: true })); // allows to acces parsessed URL-encoded requests
+app.use(bodyparser.json()); // parses incoming JSON requests
+
 
 const dbPath = path.join(__dirname, "public", "data", "festival.db");
-const sqlite3 = require("sqlite3").verbose();
+const sqlite3 = require("sqlite3").verbose(); // verbose allows more detailed messages
 
 const db = new sqlite3.Database("festival.db", (err) => {
   if (err) {
@@ -28,7 +29,8 @@ let mainScene = [];
 let smallScene = [];
 let altScene = [];
 
-db.serialize(()=> {
+// groups SQLite operations swquentially
+db.serialize(() => {
   db.all(`SELECT artist_name, performance_time
   FROM artists
   INNER JOIN performances ON artists.artist_id=performances.artist_id
@@ -36,11 +38,11 @@ db.serialize(()=> {
   WHERE scenes.scene_id = 1 AND performance_date LIKE '%2024%'
   ORDER BY performance_time;
   `, [], (err, rows) => {
-    if(err){
+    if (err) {
       console.log("Database error.");
     }
-    else{
-      mainScene=rows;
+    else {
+      mainScene = rows;
     }
   });
 
@@ -51,28 +53,28 @@ db.serialize(()=> {
     WHERE scenes.scene_id = 1 AND performance_date LIKE '%2024%'
     ORDER BY performance_time;
     `, [], (err, rows) => {
-      if(err){
-        console.log("Database error.");
-      }
-      else{
-        smallScene=rows;
-      }
-    });
+    if (err) {
+      console.log("Database error.");
+    }
+    else {
+      smallScene = rows;
+    }
+  });
 
-    db.all(`SELECT artist_name, performance_time
+  db.all(`SELECT artist_name, performance_time
       FROM artists
       INNER JOIN performances ON artists.artist_id=performances.artist_id
       INNER JOIN scenes ON performances.scene_id=scenes.scene_id
       WHERE scenes.scene_id = 1 AND performance_date LIKE '%2024%'
       ORDER BY performance_time;
       `, [], (err, rows) => {
-        if(err){
-          console.log("Database error.");
-        }
-        else{
-          altScene=rows;
-        }
-      });
+    if (err) {
+      console.log("Database error.");
+    }
+    else {
+      altScene = rows;
+    }
+  });
 
 });
 
@@ -92,6 +94,7 @@ app.get("/", (req, res) => {
   });
 });
 
+// routes to other ejs files
 app.get("/nav", (req, res) => {
   res.render("nav");
 });
@@ -156,18 +159,18 @@ app.get('/contact', (req, res) => {
   res.render('contact');
 })
 
-app.post('/save_contact', (req, res) =>{
+
+app.post('/save_contact', (req, res) => {
   const contact_query = 'INSERT INTO contacts (contact_name, contact_email, subject, message) \
                      VALUES (?, ?, ?, ?);'
-  db.run(contact_query, Object.values(req.body), (err) =>{ // Object.values(req.body) makes array object
-    if (err)
-    {
-      res.render('confirmation', {response: "Database error"})
+  db.run(contact_query, Object.values(req.body), (err) => { // Object.values(req.body) makes array object
+    if (err) {
+      res.render('confirmation', { response: "Database error" })
     }
-    else{
-      res.render('confirmation', {response: "Message sent succesfully."})
+    else {
+      res.render('confirmation', { response: "Message sent succesfully." })
     }
-  }) 
+  })
 });
 
 app.get('/cookie_banner', (req, res) => {
