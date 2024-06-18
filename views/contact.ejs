@@ -1,6 +1,6 @@
 <h2>Contact</h2>
 <div class="contact-container">
-  <form action="/save_contact" method="POST">
+  <form action="/save_contact" method="POST" onsubmit="return validateEmail()"W">
     <label for="fullname">Your name:</label><br>
     <input type="text" id="fullname" name="fullname" autocomplete="given-name" required placeholder="Your name..."><br>
     <label for="email">Your email:</label><br>

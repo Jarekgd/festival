@@ -128,5 +128,15 @@ document.getElementById('contactForm').addEventListener('submit', function (even
   alert('Message sent successfully!');
 });
 
+// validation email
+function validateEmail() {
+  var email = document.getElementById('email').value;
+  if (!email.includes('@')) {
+    alert('Please enter a valid email address.');
+    return false;
+  }
+  return true;
+}
+
 
 
