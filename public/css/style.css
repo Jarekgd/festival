@@ -395,14 +395,14 @@ footer {
   /* The main page big*/
   #main-title {
 
-    top: -70px;
+    top: 0px;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2.5em;
   }
 
   #main-date {
-    top: -80px;
+    top: -40px;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2.5em;
