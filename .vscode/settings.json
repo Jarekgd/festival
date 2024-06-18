@@ -1,5 +1,9 @@
 {
   "liveServer.settings.host": "localhost",
   "livePreview.portNumber": 5000,
-  "livePreview.hostIP": "10.0.0.1"
+  "livePreview.hostIP": "10.0.0.1",
+  "prettier.enable": false,
+  "prettier.useEditorConfig": false,
+  "prettier.withNodeModules": false,
+  "editor.defaultFormatter": "vscode.html-language-features"
 }

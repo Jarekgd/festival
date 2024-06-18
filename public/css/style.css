@@ -125,7 +125,7 @@ a:active {
 #main-title {
   text-align: center;
   position: relative;
-  top: 7%;
+  top: -10%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 4vh;
@@ -134,20 +134,20 @@ a:active {
 #main-date {
   text-align: center;
   position: relative;
-  top: 60%;
+  top: -15%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.5em;
-  line-height: 50%;
+  font-size: 2em;
+  line-height: 30%;
 }
 
 #countdown {
   text-align: center;
   position: relative;
-  top: 70%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.5em;
+  font-size: 1.5em;
   line-height: 50%;
 }
 
@@ -209,12 +209,12 @@ section {
 
 /* container small */
 .left {
-  display: row;
+  flex-direction: row;
   justify-content: space-around;
 }
 
 .right {
-  display: row;
+  flex-direction: row;
   text-align: justify;
   line-height: 30px;
   padding: 20px;
@@ -243,16 +243,29 @@ h3 {
   padding: 20px;
 }
 
+.arch ul {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.arch ul li {
+  justify-content: center;
+  align-items: center;
+
+}
+
+
 /* Archive small */
 .flex-container-arch {
   display: flex;
   flex-direction: column;
   font-size: 14px;
   padding: 10px 60px;
+  margin: 10px;
 }
 
 .arch-left {
-
+  padding: 10px;
   flex: 50%;
 }
 
@@ -297,6 +310,7 @@ textarea {
 #faq {
   margin-bottom: 40px;
   height: 80%;
+  height: 110%
 }
 
 .flex-container-faq {
@@ -355,6 +369,10 @@ footer {
   width: 100%;
 }
 
+.arch {
+  padding: 10px;
+}
+
 @media only screen and (min-width: 1000px) {
 
   /* Navigation big*/
@@ -377,29 +395,30 @@ footer {
   /* The main page big*/
   #main-title {
 
-    top: 0px;
+    top: -70px;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2.5em;
   }
 
   #main-date {
-    top: 0px;
+    top: -80px;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2.5em;
     line-height: 50%;
   }
 
-  .update {
+  #countdown {
     text-align: center;
     position: relative;
-    top: 75%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2.5em;
+    font-size: 2em;
     line-height: 50%;
   }
+
 
   /* Sections big */
   .section {

@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contemporary Jazz Festival 2024 - Musicians</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/11edfe8d81.js"
-      crossorigin="anonymous"
-    ></script>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/11edfe8d81.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav><%- include('nav_other') %></nav>
-    
     <section>
       <h2>Musicians</h2>
         <div class="container-musicians">
             <% artists.forEach(artist=> { %>
             <div id="musicians-data" class="musicians-data">
-                <div><%= artist.artist_name %><br><img src="/<%= artist.artist_picture %>" alt="<%= artist.artist_name %>" width="100"/><br />
+                <div><%= artist.artist_name %><br><img src="/<%= artist.artist_picture %>" alt="<%= artist.artist_name %>" width="100"/><br>
                 <%=artist.artist_description %></div><br>
             </div>
           <% }); %>

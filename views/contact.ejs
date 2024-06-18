@@ -1,41 +1,15 @@
 <h2>Contact</h2>
 <div class="contact-container">
   <form action="/save_contact" method="POST">
-    <label for="name">Your name:</label><br />
-    <input
-      type="text"
-      id="fullname"
-      name="fullname"
-      autocomplete="given-name"
-      required
-      placeholder="Your name..."
-    /><br />
-    <label for="email">Your email:</label><br />
-    <input
-      id="email"
-      name="email"
-      type="email"
-      autocomplete="off"
-      required
-      placeholder="Your email..."
-    /><br />
-    <label for="subject">Subject:</label><br />
-    <input
-      type="text"
-      id="subject"
-      name="subject"
-      placeholder="Subject..."
-    /><br />
-    <label for="message">Message:</label><br />
-    <textarea
-      name="message"
-      rows="6"
-      title="message"
-      id="message"
-      placeholder="Write a message..."
-    ></textarea
-    ><br />
-
-    <input type="submit" value="Submit" />
+    <label for="fullname">Your name:</label><br>
+    <input type="text" id="fullname" name="fullname" autocomplete="given-name" required placeholder="Your name..."><br>
+    <label for="email">Your email:</label><br>
+    <input id="email" name="email" type="email" autocomplete="off" required placeholder="Your email..."><br>
+    <label for="subject">Subject:</label><br>
+    <input type="text" id="subject" name="subject" placeholder="Subject..."><br>
+    <label for="message">Message:</label><br>
+    <textarea name="message" rows="6" title="message" id="message" placeholder="Write a message...">
+      </textarea><br>
+    <input type="submit" value="Submit">
   </form>
 </div>
