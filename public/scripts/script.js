@@ -10,7 +10,7 @@ if (days > 1) {
 } else if (days < 0) {
   document.getElementById("countdown").innerHTML = "Festival was " + -days + " days ago";
 } else if (days === 1) {
-  document.getElementById("countdown").innerHTML = "Festival statrs tomorrow!";
+  document.getElementById("countdown").innerHTML = "Festival starts tomorrow!";
 } else {
   document.getElementById("countdown").innerHTML = "Festival begins today!";
 }

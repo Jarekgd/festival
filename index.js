@@ -105,15 +105,13 @@ app.get("/nav_other", (req, res) => {
 
 app.get("/musicians", (req, res) => {
   const musicians_query =
-    "SELECT artist_name, genre_name, artist_picture, artist_description \
+    "SELECT artist_name, artist_picture, artist_description \
     FROM artists \
-    INNER JOIN genres ON artists.genre_id = genres.genre_id \
     INNER JOIN performances ON artists.artist_id=performances.artist_id \
     WHERE performance_date LIKE '%2024%'";
   db.all(musicians_query, [], (err, rows) => {
     if (err) {
       console.log("Database error.");
-      res.status(500).send("Database error");
       return;
     }
     res.render("musicians", { artists: rows });
